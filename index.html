@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zagros Vitosha Bulgaria | International Polymer & Petrochemical Exporter</title>
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <!-- Tailwind CSS with custom branding -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zvb: {
+                            navy: '#09152e',
+                            deep: '#060d1f',
+                            blue: '#163573',
+                            royal: '#1e4bb5',
+                            gold: '#f59e0b',
+                            goldLight: '#fbbf24',
+                            border: '#1f2f54'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-mesh {
+            background-color: #060d1f;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(22, 53, 115, 0.5) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(30, 75, 181, 0.4) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.1) 0px, transparent 50%);
+        }
+        .card-navy {
+            background: linear-gradient(180deg, rgba(15, 29, 61, 0.85) 0%, rgba(9, 21, 46, 0.95) 100%);
+            border: 1px solid #1f2f54;
+        }
+        .card-navy:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 20px 40px -15px rgba(22, 53, 115, 0.6);
+            transform: translateY(-3px);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#060d1f] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- Top Announcement Bar (Fast Contacts) -->
+    <div class="bg-zvb-deep border-b border-zvb-border/60 text-xs py-2 px-6">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-slate-300">
+            <div class="flex items-center space-x-4">
+                <span class="inline-flex items-center text-amber-400 font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-2"></span>
+                    Direct Maritime Polymer Deliveries to Black Sea & Med Ports
+                </span>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="hidden md:inline text-slate-300"><i class="fa-solid fa-location-dot text-amber-400 mr-1.5"></i> Sofia, Bulgaria</span>
+            </div>
+            <div class="flex items-center space-x-5 text-slate-300">
+                <a href="mailto:Zvbulgaria@gmail.com" class="hover:text-amber-400 transition flex items-center">
+                    <i class="fa-solid fa-envelope text-amber-400 mr-1.5"></i> Zvbulgaria@gmail.com
+                </a>
+                <a href="https://wa.me/359889700004" target="_blank" class="hover:text-emerald-400 transition flex items-center font-medium">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> +359 88 970 0004
+                </a>
+                <a href="tel:+359877944353" class="hidden sm:flex hover:text-emerald-400 transition items-center">
+                    <i class="fa-solid fa-phone text-blue-400 mr-1.5"></i> +359 87 794 4353
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="sticky top-0 z-50 bg-[#09152e]/90 backdrop-blur-md border-b border-zvb-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3.5">
+                <img src="logo.jpg" alt="Zagros Vitosha Bulgaria" class="h-14 w-auto object-contain rounded-xl shadow-lg border border-slate-700/80">
+                <div>
+                    <span class="font-display text-2xl font-black tracking-tight text-white block">ZAGROS VITOSHA</span>
+                    <span class="text-[11px] uppercase tracking-widest text-amber-400 font-bold block -mt-1">BULGARIA • POLYMERS & RAW MATERIALS</span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-200">
+                <a href="#products" class="hover:text-amber-400 transition">Polymer Grades</a>
+                <a href="#gallery" class="hover:text-amber-400 transition">Packaging & Yard</a>
+                <a href="#ports" class="hover:text-amber-400 transition">Maritime Ports</a>
+                <a href="#tds" class="hover:text-amber-400 transition">TDS Specifications</a>
+                <a href="#rfq" class="hover:text-amber-400 transition">Request Quote (RFQ)</a>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/359889700004?text=Hello%20Zagros%20Vitosha%20Bulgaria%2C%20I%20would%20like%20to%20inquire%20about%20CIF%20polymer%20prices." target="_blank" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-white transition font-semibold text-xs tracking-wide">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>WhatsApp Desk</span>
+                </a>
+                <a href="#rfq" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold text-xs uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-lg shadow-amber-500/20">
+                    <span>Submit RFQ</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-mesh pt-20 pb-24 px-6 border-b border-zvb-border">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-zvb-blue/40 border border-blue-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-6">
+                        <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                        <span>Direct International Polymer Manufacturer & Exporter</span>
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1]">
+                        Prime Virgin Polymers Delivered Directly to <span class="text-gold-gradient">Varna & Regional Ports</span>
+                    </h1>
+
+                    <p class="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
+                        Zagros Vitosha Bulgaria supplies top-tier petrochemical raw materials: Polyethylene (HDPE / LDPE / LLDPE), Polypropylene (PP), Suspension PVC Resin (S-PVC K67), and Fasteners on verified CIF/CFR terms to <strong class="text-white">Port of Varna, Burgas, Mersin & Istanbul</strong>.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#rfq" class="px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-extrabold text-sm uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/20 flex items-center">
+                            <i class="fa-solid fa-file-invoice mr-2 text-base"></i> Request Official CIF Quotation
+                        </a>
+                        <a href="#tds" class="px-7 py-4 rounded-xl bg-zvb-navy border border-zvb-border text-white font-bold text-sm hover:border-blue-400 transition flex items-center">
+                            <i class="fa-solid fa-table-list mr-2 text-amber-400"></i> View TDS Specifications
+                        </a>
+                    </div>
+
+                    <!-- Fast Trust Badges -->
+                    <div class="mt-12 pt-8 border-t border-zvb-border/80 grid grid-cols-3 gap-6 text-left">
+                        <div>
+                            <div class="text-2xl font-black text-white font-display">100%</div>
+                            <div class="text-xs font-medium text-slate-400 uppercase tracking-wider mt-0.5">Virgin Prime Grades</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-black text-amber-400 font-display">CIF / CFR</div>
+                            <div class="text-xs font-medium text-slate-400 uppercase tracking-wider mt-0.5">Incoterms 2020 Insured</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-black text-emerald-400 font-display">SGS / COA</div>
+                            <div class="text-xs font-medium text-slate-400 uppercase tracking-wider mt-0.5">Port Inspected</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic (Vessel & Logo Container) -->
+                <div class="lg:col-span-5">
+                    <div class="card-navy rounded-3xl p-8 relative overflow-hidden shadow-2xl">
+                        <div class="absolute -right-16 -top-16 w-56 h-56 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+                        <div class="flex items-center justify-between pb-6 border-b border-zvb-border">
+                            <div class="flex items-center space-x-3">
+                                <img src="logo.jpg" alt="ZVB Badge" class="h-10 w-auto rounded-md">
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Commercial Dispatch Desk</h4>
+                                    <p class="text-[11px] text-slate-400">Zagros Vitosha Bulgaria Ltd.</p>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold border border-emerald-500/20 uppercase tracking-wider">Active Loading</span>
+                        </div>
+
+                        <div class="mt-6 space-y-4">
+                            <div class="bg-zvb-deep/80 rounded-2xl p-4 border border-zvb-border/60">
+                                <div class="flex items-center justify-between text-xs">
+                                    <span class="text-slate-400">Target Commodity</span>
+                                    <span class="text-white font-bold">HDPE Film / Injection & S-PVC K67</span>
+                                </div>
+                                <div class="mt-2 flex items-center justify-between text-xs">
+                                    <span class="text-slate-400">Regular Discharge Ports</span>
+                                    <span class="text-amber-400 font-semibold">Port of Varna & Mersin</span>
+                                </div>
+                                <div class="mt-2 flex items-center justify-between text-xs">
+                                    <span class="text-slate-400">Standard Container Load</span>
+                                    <span class="text-slate-200 font-semibold">24.75 MT / 40' High Cube</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-zvb-deep/80 rounded-2xl p-4 border border-zvb-border/60">
+                                <div class="text-xs font-semibold text-slate-300 mb-2">Direct Negotiation Channels</div>
+                                <div class="space-y-1.5 text-xs text-slate-400">
+                                    <div class="flex items-center justify-between">
+                                        <span>Corporate Desk:</span>
+                                        <span class="text-white font-medium">Zvbulgaria@gmail.com</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span>Primary WhatsApp:</span>
+                                        <span class="text-emerald-400 font-semibold">+359 88 970 0004</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span>Secondary Line:</span>
+                                        <span class="text-white font-medium">+359 87 794 4353</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#rfq" class="w-full py-3.5 rounded-xl bg-zvb-royal hover:bg-blue-600 text-white font-bold text-xs uppercase tracking-wider text-center block transition shadow-lg">
+                                Inquire Current Tonnage & CIF Prices
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Polymer Portfolio -->
+    <section id="products" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+                <span class="text-amber-400 font-bold tracking-widest text-xs uppercase">Certified Export Range</span>
+                <h2 class="font-display text-3xl sm:text-5xl font-black text-white mt-2">Core Polymer Grades</h2>
+            </div>
+            <p class="text-slate-400 max-w-md text-sm mt-4 md:mt-0 leading-relaxed">
+                Consistent MFI and density parameters manufactured under strict quality inspections for high-throughput extrusion and injection machinery.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- HDPE & LDPE -->
+            <div class="card-navy rounded-3xl p-8 flex flex-col justify-between transition-all">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-6 border border-amber-500/20">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Polyethylene</span>
+                    <h3 class="font-display text-2xl font-bold text-white mt-1">HDPE & LDPE Resins</h3>
+                    <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                        Prime virgin granules for shopping bags, heavy packaging, water and gas pipes (PE100), and industrial containers.
+                    </p>
+
+                    <div class="mt-6 space-y-3 text-xs">
+                        <div class="flex justify-between py-2 border-b border-zvb-border">
+                            <span class="text-slate-400">Popular Grades:</span>
+                            <span class="font-semibold text-white">HDPE Film (5110, F7000), Pipe (PE100), LDPE (2420H)</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-zvb-border">
+                            <span class="text-slate-400">Packaging:</span>
+                            <span class="font-semibold text-white">25kg PP bags on shrink-wrapped pallets</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="text-slate-400">Quality Inspection:</span>
+                            <span class="font-semibold text-emerald-400">Full COA & SGS Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="fillRFQ('HDPE & LDPE Resins')" class="mt-8 w-full py-3.5 rounded-xl bg-zvb-blue hover:bg-zvb-royal text-white font-bold text-xs uppercase tracking-wider transition">
+                    Inquire Grade & Pricing
+                </button>
+            </div>
+
+            <!-- Polypropylene (PP) -->
+            <div class="card-navy rounded-3xl p-8 flex flex-col justify-between transition-all">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-6 border border-blue-500/20">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Polypropylene</span>
+                    <h3 class="font-display text-2xl font-bold text-white mt-1">PP Homopolymer & Copolymer</h3>
+                    <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                        Raffia grade for woven bags and FIBC, high-speed fiber extrusion, and injection molding for consumer and industrial products.
+                    </p>
+
+                    <div class="mt-6 space-y-3 text-xs">
+                        <div class="flex justify-between py-2 border-b border-zvb-border">
+                            <span class="text-slate-400">Popular Grades:</span>
+                            <span class="font-semibold text-white">PP Raffia (V30S, T30S), Injection (Z30S, HP500N)</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-zvb-border">
+                            <span class="text-slate-400">MFI (230°C/2.16kg):</span>
+                            <span class="font-semibold text-white">2.8 - 25.0 g/10min</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="text-slate-400">Applications:</span>
+                            <span class="font-semibold text-white">Woven sacks, strapping, thin-wall food containers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="fillRFQ('Polypropylene (PP)')" class="mt-8 w-full py-3.5 rounded-xl bg-zvb-blue hover:bg-zvb-royal text-white font-bold text-xs uppercase tracking-wider transition">
+                    Inquire Grade & Pricing
+                </button>
+            </div>
+
+            <!-- Suspension PVC & Industrial Fasteners -->
+            <div class="card-navy rounded-3xl p-8 flex flex-col justify-between transition-all">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6 border border-emerald-500/20">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Suspension PVC</span>
+                    <h3 class="font-display text-2xl font-bold text-white mt-1">S-PVC Resin & Fasteners</h3>
+                    <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                        High-purity suspension PVC for window profiles, rigid conduits, cables, plus industrial DIN/ISO fasteners and threaded rods.
+                    </p>
+
+                    <div class="mt-6 space-y-3 text-xs">
+                        <div class="flex justify-between py-2 border-b border-zvb-border">
+                            <span class="text-slate-400">PVC Resin Grades:</span>
+                            <span class="font-semibold text-white">S-PVC K67 (SG5), S-PVC K58, S-PVC K70</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-zvb-border">
+                            <span class="text-slate-400">Fasteners & Goods:</span>
+                            <span class="font-semibold text-white">DIN Screws, Bolts, Nuts, Bitumen 60/70</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="text-slate-400">Certifications:</span>
+                            <span class="font-semibold text-emerald-400">REACH / RoHS / ISO 9001 Compliant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="fillRFQ('Suspension PVC (S-PVC K67)')" class="mt-8 w-full py-3.5 rounded-xl bg-zvb-blue hover:bg-zvb-royal text-white font-bold text-xs uppercase tracking-wider transition">
+                    Inquire Grade & Pricing
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Real Photographic Packaging, Pallet & Port Logistics Gallery -->
+    <section id="gallery" class="py-20 bg-[#071126] border-y border-zvb-border px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+                <div>
+                    <span class="text-amber-400 font-bold tracking-widest text-xs uppercase">Visual Evidence & Standards</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-black text-white mt-1">Export Packaging, Palletization & Port Operations</h2>
+                </div>
+                <p class="text-slate-400 text-xs sm:text-sm max-w-md mt-3 md:mt-0">
+                    Real visual standards of our 25kg valve bags, shrink-wrapped heat-treated pallets, and container stuffing at discharging terminals.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Image Card 1: 25kg Bags on Pallets -->
+                <div class="card-navy rounded-2xl overflow-hidden group">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Polymer 25kg Palletized Bags" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-zvb-deep/90 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-amber-400/20 uppercase tracking-wider">
+                            25kg Valve Bags
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-white text-sm">Palletized & Shrink-Wrapped</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                            Heavy-duty moisture-proof PP bags stacked securely on fumigated wooden/plastic pallets with reinforced stretch hooding.
+                        </p>
+                        <div class="mt-3 text-[11px] text-amber-400 font-semibold flex items-center">
+                            <i class="fa-solid fa-check mr-1.5"></i> 1,375 kg net per pallet
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Card 2: Container Loading / Stuffing -->
+                <div class="card-navy rounded-2xl overflow-hidden group">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop" alt="Maritime Container Stuffing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-zvb-deep/90 text-blue-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-blue-400/20 uppercase tracking-wider">
+                            40' High Cube Stuffing
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-white text-sm">Container Logistics</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                            Direct container loading with air bags, dunnage and heavy lashing to avoid bag shifting during rough ocean voyages.
+                        </p>
+                        <div class="mt-3 text-[11px] text-blue-400 font-semibold flex items-center">
+                            <i class="fa-solid fa-check mr-1.5"></i> Up to 24.75 - 25.5 MT per FCL
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Card 3: Bulk Carrier & Port Crane -->
+                <div class="card-navy rounded-2xl overflow-hidden group">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop" alt="Port Vessel Discharging" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-zvb-deep/90 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-emerald-400/20 uppercase tracking-wider">
+                            Port of Varna / Mersin
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-white text-sm">Discharge Operations</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                            Continuous discharging operations at Varna-West and Mersin Port terminals with customs bonded transit facilities.
+                        </p>
+                        <div class="mt-3 text-[11px] text-emerald-400 font-semibold flex items-center">
+                            <i class="fa-solid fa-check mr-1.5"></i> Direct Seaway Bill (SWB / B/L)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Card 4: Quality Lab Inspection & Granules -->
+                <div class="card-navy rounded-2xl overflow-hidden group">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop" alt="Laboratory Quality Control" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-zvb-deep/90 text-amber-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-amber-400/20 uppercase tracking-wider">
+                            COA Inspection Lab
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-white text-sm">Batch Quality Control</h4>
+                        <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                            Every single production batch undergoes melt index, density, color ash, and tensile testing prior to port gate-in.
+                        </p>
+                        <div class="mt-3 text-[11px] text-amber-400 font-semibold flex items-center">
+                            <i class="fa-solid fa-check mr-1.5"></i> Verified Certificate of Analysis
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maritime Logistics Hubs & Ports -->
+    <section id="ports" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-amber-400 font-bold tracking-widest text-xs uppercase">Strategic Maritime Gateways</span>
+            <h2 class="font-display text-3xl sm:text-5xl font-black text-white mt-2">Connecting Factories to Strategic Ports</h2>
+            <p class="text-slate-400 text-sm mt-3">We partner with premier ocean carriers (MSC, Maersk, CMA CGM) ensuring swift port clearance and overland transit.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Port of Varna -->
+            <div class="card-navy p-7 rounded-3xl border-t-4 border-t-amber-400">
+                <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">Bulgaria Gateway</div>
+                <h3 class="font-display text-2xl font-bold text-white mt-1">Port of Varna</h3>
+                <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                    Direct container discharge at Varna-West and Varna-East terminals. Truck deliveries direct to Sofia, Plovdiv & Asenovgrad factories.
+                </p>
+                <div class="mt-5 inline-flex items-center text-xs font-bold text-slate-200">
+                    <i class="fa-solid fa-anchor text-amber-400 mr-2"></i> CIF / CFR Varna Port
+                </div>
+            </div>
+
+            <!-- Port of Burgas -->
+            <div class="card-navy p-7 rounded-3xl border-t-4 border-t-blue-400">
+                <div class="text-[11px] font-bold text-blue-400 uppercase tracking-wider">Bulgaria Gateway</div>
+                <h3 class="font-display text-2xl font-bold text-white mt-1">Port of Burgas</h3>
+                <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                    Deep-sea bulk and container handling with fast rail and road connectivity across Thrace and Southeast European manufacturing hubs.
+                </p>
+                <div class="mt-5 inline-flex items-center text-xs font-bold text-slate-200">
+                    <i class="fa-solid fa-anchor text-blue-400 mr-2"></i> CIF / CFR Burgas Port
+                </div>
+            </div>
+
+            <!-- Port of Mersin -->
+            <div class="card-navy p-7 rounded-3xl border-t-4 border-t-emerald-400">
+                <div class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">Turkey / East Med</div>
+                <h3 class="font-display text-2xl font-bold text-white mt-1">Port of Mersin (MIP)</h3>
+                <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                    Mediterranean petrochemical hub with free zone storage facilities, bonded transit corridors, and high frequency feeder sailings.
+                </p>
+                <div class="mt-5 inline-flex items-center text-xs font-bold text-slate-200">
+                    <i class="fa-solid fa-anchor text-emerald-400 mr-2"></i> CIF Mersin Port (MIP)
+                </div>
+            </div>
+
+            <!-- Istanbul / Ambarlı -->
+            <div class="card-navy p-7 rounded-3xl border-t-4 border-t-purple-400">
+                <div class="text-[11px] font-bold text-purple-400 uppercase tracking-wider">Turkey / Marmara</div>
+                <h3 class="font-display text-2xl font-bold text-white mt-1">Istanbul (Ambarlı)</h3>
+                <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+                    Serving the industrial manufacturing corridors of İkitelli, Gebze, and Çerkezköy with high-frequency container rotations.
+                </p>
+                <div class="mt-5 inline-flex items-center text-xs font-bold text-slate-200">
+                    <i class="fa-solid fa-anchor text-purple-400 mr-2"></i> CIF Ambarlı / Haydarpaşa
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Datasheet Specifications (TDS Table) -->
+    <section id="tds" class="py-20 bg-[#071126] border-y border-zvb-border px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+                <div>
+                    <span class="text-amber-400 font-bold tracking-widest text-xs uppercase">Certified Quality Parameters</span>
+                    <h2 class="font-display text-3xl font-black text-white mt-1">Technical Datasheet (TDS) Specifications</h2>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-1">Laboratory certified values according to international ASTM and ISO standards.</p>
+                </div>
+                <div>
+                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold">
+                        <i class="fa-solid fa-certificate mr-1.5"></i> ISO 9001 / REACH / RoHS Compliant
+                    </span>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto card-navy rounded-3xl p-4 border border-zvb-border">
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="border-b border-zvb-border text-slate-300 font-bold uppercase tracking-wider bg-zvb-deep/80">
+                            <th class="py-4 px-4">Polymer Grade</th>
+                            <th class="py-4 px-4">Test Standard</th>
+                            <th class="py-4 px-4">Melt Flow Index (MFI)</th>
+                            <th class="py-4 px-4">Density (g/cm³)</th>
+                            <th class="py-4 px-4">Tensile Strength</th>
+                            <th class="py-4 px-4">Primary Application</th>
+                            <th class="py-4 px-4 text-right">Spec Sheet</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-zvb-border text-slate-300">
+                        <tr class="hover:bg-zvb-blue/20 transition">
+                            <td class="py-4 px-4 font-bold text-white">HDPE Film Grade (5110 / F7000)</td>
+                            <td class="py-4 px-4 text-slate-400">ISO 1183</td>
+                            <td class="py-4 px-4 text-amber-400 font-semibold">0.05 - 0.12 g/10min</td>
+                            <td class="py-4 px-4">0.952 - 0.956</td>
+                            <td class="py-4 px-4">≥ 32 MPa</td>
+                            <td class="py-4 px-4">High-strength thin shopping bags, liners</td>
+                            <td class="py-4 px-4 text-right">
+                                <button onclick="fillRFQ('HDPE Film Grade (5110)')" class="px-3 py-1.5 rounded-lg bg-amber-500/15 text-amber-400 border border-amber-500/30 hover:bg-amber-500 hover:text-black transition font-bold text-[11px]">
+                                    <i class="fa-solid fa-file-pdf mr-1"></i> Request TDS
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-zvb-blue/20 transition">
+                            <td class="py-4 px-4 font-bold text-white">HDPE Pipe Grade (PE100 Black)</td>
+                            <td class="py-4 px-4 text-slate-400">ISO 4427</td>
+                            <td class="py-4 px-4 text-amber-400 font-semibold">0.22 - 0.28 g/10min</td>
+                            <td class="py-4 px-4">0.958 - 0.962</td>
+                            <td class="py-4 px-4">≥ 25 MPa (MRS 10.0)</td>
+                            <td class="py-4 px-4">Potable water & gas transmission pressure pipes</td>
+                            <td class="py-4 px-4 text-right">
+                                <button onclick="fillRFQ('HDPE Pipe Grade (PE100)')" class="px-3 py-1.5 rounded-lg bg-amber-500/15 text-amber-400 border border-amber-500/30 hover:bg-amber-500 hover:text-black transition font-bold text-[11px]">
+                                    <i class="fa-solid fa-file-pdf mr-1"></i> Request TDS
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-zvb-blue/20 transition">
+                            <td class="py-4 px-4 font-bold text-white">LDPE Heavy Film (2420H / 020)</td>
+                            <td class="py-4 px-4 text-slate-400">ASTM D1238</td>
+                            <td class="py-4 px-4 text-blue-400 font-semibold">1.9 - 2.2 g/10min</td>
+                            <td class="py-4 px-4">0.923 - 0.926</td>
+                            <td class="py-4 px-4">≥ 17 MPa</td>
+                            <td class="py-4 px-4">Shrink film, heavy-duty agricultural film</td>
+                            <td class="py-4 px-4 text-right">
+                                <button onclick="fillRFQ('LDPE Film (2420H)')" class="px-3 py-1.5 rounded-lg bg-blue-500/15 text-blue-400 border border-blue-500/30 hover:bg-blue-500 hover:text-white transition font-bold text-[11px]">
+                                    <i class="fa-solid fa-file-pdf mr-1"></i> Request TDS
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-zvb-blue/20 transition">
+                            <td class="py-4 px-4 font-bold text-white">PP Raffia / Yarn (V30S / T30S)</td>
+                            <td class="py-4 px-4 text-slate-400">ISO 1133</td>
+                            <td class="py-4 px-4 text-blue-400 font-semibold">2.8 - 3.5 g/10min</td>
+                            <td class="py-4 px-4">0.900 - 0.905</td>
+                            <td class="py-4 px-4">≥ 34 MPa</td>
+                            <td class="py-4 px-4">Woven bags, FIBC bulk bags, strapping tapes</td>
+                            <td class="py-4 px-4 text-right">
+                                <button onclick="fillRFQ('PP Raffia (V30S)')" class="px-3 py-1.5 rounded-lg bg-blue-500/15 text-blue-400 border border-blue-500/30 hover:bg-blue-500 hover:text-white transition font-bold text-[11px]">
+                                    <i class="fa-solid fa-file-pdf mr-1"></i> Request TDS
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-zvb-blue/20 transition">
+                            <td class="py-4 px-4 font-bold text-white">Suspension PVC (S-PVC K67 / SG5)</td>
+                            <td class="py-4 px-4 text-slate-400">GB/T 5761</td>
+                            <td class="py-4 px-4 text-emerald-400 font-semibold">K-Value: 66 - 68</td>
+                            <td class="py-4 px-4">Apparent: 0.54 g/ml</td>
+                            <td class="py-4 px-4">High Purity White</td>
+                            <td class="py-4 px-4">Window profiles, rigid pipes, conduit, fittings</td>
+                            <td class="py-4 px-4 text-right">
+                                <button onclick="fillRFQ('S-PVC K67 Resin')" class="px-3 py-1.5 rounded-lg bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-black transition font-bold text-[11px]">
+                                    <i class="fa-solid fa-file-pdf mr-1"></i> Request TDS
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formal Request for Quotation (RFQ) Section -->
+    <section id="rfq" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="card-navy rounded-3xl p-8 sm:p-12 border-2 border-amber-500/20 shadow-2xl">
+            <div class="text-center mb-10">
+                <span class="text-amber-400 font-bold tracking-widest text-xs uppercase">Direct Commercial Desk</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-black text-white mt-1">Submit Formal Request for Quotation (RFQ)</h2>
+                <p class="text-slate-400 text-sm mt-2">Certified technical datasheets, proforma quotations, and CIF rates prepared within 4 business hours.</p>
+            </div>
+
+            <form id="rfqForm" onsubmit="handleRFQSubmit(event)" class="space-y-6">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Company Name *</label>
+                        <input type="text" id="company" required placeholder="e.g. Profilink / Megaport / Balkan Plastics" class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Corporate Email *</label>
+                        <input type="email" id="email" required placeholder="purchasing@company.com" class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 text-sm">
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Requested Commodity *</label>
+                        <select id="commodity" required class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white focus:outline-none focus:border-amber-400 text-sm">
+                            <option value="HDPE Granules (Film / Pipe PE100)">HDPE Granules (Film / Pipe PE100)</option>
+                            <option value="LDPE / LLDPE Virgin Resins">LDPE / LLDPE Virgin Resins</option>
+                            <option value="Polypropylene PP (Raffia / Injection)">Polypropylene PP (Raffia / Injection)</option>
+                            <option value="Suspension PVC (S-PVC K67 / K58)">Suspension PVC (S-PVC K67 / K58)</option>
+                            <option value="Industrial Fasteners (DIN/ISO Screws & Bolts)">Industrial Fasteners (DIN/ISO)</option>
+                            <option value="Bitumen (Penetration 60/70)">Bitumen (Penetration 60/70)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Target Volume (MT) *</label>
+                        <input type="text" id="volume" required placeholder="e.g. 100 MT / Monthly" class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Destination Port *</label>
+                        <select id="destination" required class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white focus:outline-none focus:border-amber-400 text-sm">
+                            <option value="CIF Port of Varna, Bulgaria">CIF Port of Varna (Bulgaria)</option>
+                            <option value="CIF Port of Burgas, Bulgaria">CIF Port of Burgas (Bulgaria)</option>
+                            <option value="CIF Port of Mersin, Turkey">CIF Port of Mersin (Turkey)</option>
+                            <option value="CIF Istanbul (Ambarlı), Turkey">CIF Istanbul Ambarlı (Turkey)</option>
+                            <option value="Other Regional European Port">Other Regional European Port</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Technical Specifications (MFI, Density, Color, Preferred Payment Terms)</label>
+                    <textarea id="notes" rows="3" placeholder="Target MFI, application, preferred payment terms (L/C at sight, CAD, T/T)..." class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 text-sm"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
+                    <div class="text-xs text-slate-400 flex items-center space-x-2">
+                        <i class="fa-solid fa-lock text-amber-400"></i>
+                        <span>Direct delivery to: <strong class="text-white">Zvbulgaria@gmail.com</strong></span>
+                    </div>
+                    <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-extrabold text-xs uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/25">
+                        Submit Official RFQ
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zvb-deep border-t border-zvb-border py-14 px-6 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex items-center space-x-4">
+                <img src="logo.jpg" alt="Zagros Vitosha Bulgaria" class="h-14 w-auto object-contain rounded-xl shadow-md border border-slate-700">
+                <div>
+                    <span class="font-display text-white font-bold text-base block">Zagros Vitosha Bulgaria Ltd.</span>
+                    <p class="text-slate-400 text-xs mt-0.5">International Bulk Polymer & Commodity Supplying • Sofia, Bulgaria</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-6 text-slate-300">
+                <a href="mailto:Zvbulgaria@gmail.com" class="hover:text-amber-400 transition flex items-center">
+                    <i class="fa-solid fa-envelope mr-2 text-amber-400"></i> Zvbulgaria@gmail.com
+                </a>
+                <a href="https://wa.me/359889700004" target="_blank" class="hover:text-emerald-400 transition flex items-center">
+                    <i class="fa-brands fa-whatsapp mr-2 text-emerald-400"></i> +359 88 970 0004
+                </a>
+                <a href="tel:+359877944353" class="hover:text-blue-400 transition flex items-center">
+                    <i class="fa-solid fa-phone mr-2 text-blue-400"></i> +359 87 794 4353
+                </a>
+            </div>
+
+            <div class="text-slate-400">
+                © 2026 Zagros Vitosha Bulgaria. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function fillRFQ(productName) {
+            const select = document.getElementById('commodity');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].text.includes(productName) || select.options[i].value.includes(productName)) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('rfq').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleRFQSubmit(e) {
+            e.preventDefault();
+            const company = document.getElementById('company').value;
+            const email = document.getElementById('email').value;
+            const commodity = document.getElementById('commodity').value;
+            const volume = document.getElementById('volume').value;
+            const destination = document.getElementById('destination').value;
+            const notes = document.getElementById('notes').value;
+
+            const subject = encodeURIComponent(`RFQ: ${commodity} for ${company} (${volume}) - Zagros Vitosha Bulgaria`);
+            const body = encodeURIComponent(
+                `Official RFQ Submission to Zagros Vitosha Bulgaria:\n\n` +
+                `Company: ${company}\n` +
+                `Corporate Email: ${email}\n` +
+                `Commodity: ${commodity}\n` +
+                `Volume: ${volume}\n` +
+                `Destination Port: ${destination}\n` +
+                `Specifications & Notes: ${notes}\n\n` +
+                `Zagros Vitosha Bulgaria Contact Details:\n` +
+                `Email: Zvbulgaria@gmail.com\n` +
+                `Phone/WhatsApp: +359 88 970 0004 / +359 87 794 4353`
+            );
+
+            // Open Gmail compose to Zvbulgaria@gmail.com
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=Zvbulgaria@gmail.com&su=${subject}&body=${body}`, '_blank');
+            alert('Thank you! Your RFQ has been prepared for Zagros Vitosha Bulgaria. You can now send it directly to our export desk at Zvbulgaria@gmail.com.');
+        }
+    </script>
+</body>
+</html>
