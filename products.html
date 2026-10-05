@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymer & Commodity Catalog | Zagros Vitosha Bulgaria</title>
+    <meta name="description" content="Technical catalog of virgin prime HDPE, LDPE, Polypropylene, Suspension PVC K67, Polystyrene, Bitumen 60/70 and industrial fasteners exported to Port of Varna, Burgas, Mersin & Istanbul.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zvb: {
+                            navy: '#09152e',
+                            deep: '#060d1f',
+                            card: '#0c1a38',
+                            blue: '#163573',
+                            royal: '#1e4bb5',
+                            gold: '#f59e0b',
+                            goldLight: '#fbbf24',
+                            border: '#1f2f54'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-mesh {
+            background-color: #060d1f;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(22, 53, 115, 0.5) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(30, 75, 181, 0.45) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.12) 0px, transparent 50%);
+        }
+        .card-navy {
+            background: linear-gradient(180deg, rgba(14, 28, 58, 0.88) 0%, rgba(9, 21, 46, 0.98) 100%);
+            border: 1px solid #1f2f54;
+        }
+        .card-navy:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 15px 35px -10px rgba(22, 53, 115, 0.6);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-[#060d1f] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- Top Corporate Bar -->
+    <div class="hidden md:block bg-zvb-deep border-b border-zvb-border/60 text-[11px] py-2 px-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between text-slate-400">
+            <div class="flex items-center space-x-3">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 font-bold border border-emerald-500/30 text-[10px]">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
+                    <span>ACTIVE VESSEL LOADINGS</span>
+                </span>
+                <span class="text-slate-300 font-medium">Prime Virgin Granules & Certified Suspension PVC Resins</span>
+            </div>
+            <div class="flex items-center space-x-6 text-slate-300">
+                <a href="mailto:Zvbulgaria@gmail.com" class="hover:text-amber-400 transition flex items-center">
+                    <i class="fa-solid fa-envelope text-amber-400 mr-1.5 text-xs"></i> Zvbulgaria@gmail.com
+                </a>
+                <a href="https://wa.me/359889700004" target="_blank" class="hover:text-emerald-400 transition flex items-center font-semibold text-emerald-400">
+                    <i class="fa-brands fa-whatsapp mr-1.5 text-xs"></i> +359 88 970 0004
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-[#060d1f]/95 backdrop-blur-md border-b border-zvb-border shadow-2xl">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0">
+                <img src="logo_transparent.png" alt="Zagros Vitosha Bulgaria Logo" class="h-9 sm:h-12 w-auto object-contain filter drop-shadow flex-shrink-0">
+                <div class="leading-tight">
+                    <span class="font-display text-sm sm:text-xl font-black tracking-tight text-white group-hover:text-amber-400 transition block whitespace-nowrap">
+                        ZAGROS VITOSHA
+                    </span>
+                    <span class="text-[8px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-extrabold block whitespace-nowrap">
+                        BULGARIA • POLYMERS
+                    </span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="hidden lg:flex items-center space-x-7 text-xs font-bold text-slate-300 uppercase tracking-wider">
+                <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+                <a href="products.html" class="text-amber-400 transition">Products & TDS</a>
+                <a href="compliance.html" class="hover:text-amber-400 transition">Compliance & COA</a>
+                <a href="logistics.html" class="hover:text-amber-400 transition">Logistics & Ports</a>
+                <a href="about.html" class="hover:text-amber-400 transition">About Company</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+                <a href="index.html#rfq" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-400 transition shadow-lg">
+                    <span>Request RFQ</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-zvb-card border border-zvb-border text-slate-300 hover:text-amber-400 transition">
+                    <i id="hamburgerIcon" class="fa-solid fa-bars text-base"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileDrawer" class="hidden lg:hidden border-t border-zvb-border bg-[#060d1f]/98 backdrop-blur-xl px-5 py-6">
+            <a href="index.html#rfq" class="w-full mb-5 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider text-center block shadow-lg">
+                Request Official CIF Quotation
+            </a>
+            <div class="flex flex-col space-y-4 text-sm font-bold uppercase tracking-wider text-slate-200">
+                <a href="index.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40">Home</a>
+                <a href="products.html" class="text-amber-400 py-1 border-b border-zvb-border/40">Products & Catalog</a>
+                <a href="compliance.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40">Compliance & COA</a>
+                <a href="logistics.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40">Logistics & Ports</a>
+                <a href="about.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40">About Company</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Catalog Hero -->
+    <section class="hero-mesh py-16 sm:py-24 px-4 sm:px-6 border-b border-zvb-border">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
+                <i class="fa-solid fa-cube"></i>
+                <span>Direct Polymer Manufacturer Portfolio</span>
+            </span>
+            <h1 class="font-display text-3xl sm:text-5xl font-black text-white tracking-tight">
+                Prime Virgin Polymers, Petrochemicals & Fasteners
+            </h1>
+            <p class="mt-4 text-sm sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                Explore our full product portfolio engineered for European high-speed extrusion lines, injection blow molding, PVC pipe profiles and construction industries.
+            </p>
+        </div>
+    </section>
+
+    <!-- Detailed Product Categories -->
+    <section class="py-20 px-4 sm:px-6 max-w-7xl mx-auto space-y-16">
+        <!-- 1. Polyethylene Section -->
+        <div class="card-navy rounded-3xl p-8 sm:p-10 border border-zvb-border">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5">
+                    <div class="rounded-2xl overflow-hidden h-64 relative">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Polyethylene Granules" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 font-black text-xs px-3 py-1 rounded-md uppercase">
+                            Polyethylene (PE)
+                        </span>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Film • Pipe • Injection</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1">High & Low Density Polyethylene (HDPE / LDPE / LLDPE)</h2>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                        Supplied in prime virgin translucent spherical granules. Ideal for film blowing (shopping bags, agricultural shrink films), PE100 pressure pipes (black compound MRS 10.0), and industrial containers.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 mt-6 text-xs">
+                        <div class="p-3.5 rounded-xl bg-zvb-deep border border-zvb-border">
+                            <span class="text-slate-400 block text-[11px]">Primary Grades:</span>
+                            <span class="font-bold text-white">HDPE Film 5110, F7000, EX5, PE100 Pipe, LDPE 2420H</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-zvb-deep border border-zvb-border">
+                            <span class="text-slate-400 block text-[11px]">Melt Flow Index (MFI):</span>
+                            <span class="font-bold text-amber-400">0.05 to 2.2 g/10min (190°C / 2.16kg)</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="index.html#rfq" class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-400 transition shadow">
+                            Inquire HDPE / LDPE Pricing
+                        </a>
+                        <a href="mailto:Zvbulgaria@gmail.com?subject=TDS%20Request:%20HDPE%20and%20LDPE" class="px-5 py-3 rounded-xl bg-zvb-deep border border-zvb-border hover:border-blue-400 text-white font-bold text-xs uppercase tracking-wider transition">
+                            <i class="fa-solid fa-file-pdf mr-1.5 text-amber-400"></i> Request Full Spec Sheet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Polypropylene Section -->
+        <div class="card-navy rounded-3xl p-8 sm:p-10 border border-zvb-border">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5">
+                    <div class="rounded-2xl overflow-hidden h-64 relative">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop" alt="Polypropylene Raffia" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-500 text-white font-black text-xs px-3 py-1 rounded-md uppercase">
+                            Polypropylene (PP)
+                        </span>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Raffia • Injection • Fiber</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1">PP Homopolymer & Impact Copolymer</h2>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                        Engineered for FIBC jumbo bags, woven sacks, carpet backing yarn, strapping bands, and thin-wall food packaging containers with high thermal resistance and stiffness.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 mt-6 text-xs">
+                        <div class="p-3.5 rounded-xl bg-zvb-deep border border-zvb-border">
+                            <span class="text-slate-400 block text-[11px]">Primary Grades:</span>
+                            <span class="font-bold text-white">PP Raffia V30S, T30S, Injection Z30S, HP500N</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-zvb-deep border border-zvb-border">
+                            <span class="text-slate-400 block text-[11px]">Melt Flow Index (MFI):</span>
+                            <span class="font-bold text-blue-400">2.8 to 25.0 g/10min (230°C / 2.16kg)</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="index.html#rfq" class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-400 transition shadow">
+                            Inquire Polypropylene Pricing
+                        </a>
+                        <a href="mailto:Zvbulgaria@gmail.com?subject=TDS%20Request:%20Polypropylene%20PP" class="px-5 py-3 rounded-xl bg-zvb-deep border border-zvb-border hover:border-blue-400 text-white font-bold text-xs uppercase tracking-wider transition">
+                            <i class="fa-solid fa-file-pdf mr-1.5 text-amber-400"></i> Request Full Spec Sheet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Suspension PVC Section -->
+        <div class="card-navy rounded-3xl p-8 sm:p-10 border border-zvb-border">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5">
+                    <div class="rounded-2xl overflow-hidden h-64 relative">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop" alt="Suspension PVC Powder" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-emerald-500 text-slate-950 font-black text-xs px-3 py-1 rounded-md uppercase">
+                            Suspension PVC
+                        </span>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Resin Powder • K67 / K58</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mt-1">Suspension PVC Resin (S-PVC K67 & K58)</h2>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                        Pure white free-flowing suspension PVC resin powder specifically manufactured for window profile extrusion, rigid PVC conduits, sewer pipes, fittings, and vinyl calendering sheets.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 mt-6 text-xs">
+                        <div class="p-3.5 rounded-xl bg-zvb-deep border border-zvb-border">
+                            <span class="text-slate-400 block text-[11px]">K-Value & Viscosity:</span>
+                            <span class="font-bold text-white">K-Value 66 - 68 (SG5 / K67), K58, K70</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-zvb-deep border border-zvb-border">
+                            <span class="text-slate-400 block text-[11px]">Apparent Density:</span>
+                            <span class="font-bold text-emerald-400">≥ 0.54 g/ml (ISO 60 compliant)</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="index.html#rfq" class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-400 transition shadow">
+                            Inquire PVC Resin Pricing
+                        </a>
+                        <a href="mailto:Zvbulgaria@gmail.com?subject=TDS%20Request:%20S-PVC%20K67" class="px-5 py-3 rounded-xl bg-zvb-deep border border-zvb-border hover:border-emerald-400 text-white font-bold text-xs uppercase tracking-wider transition">
+                            <i class="fa-solid fa-file-pdf mr-1.5 text-amber-400"></i> Request Full Spec Sheet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Polystyrene, Bitumen & Fasteners Summary -->
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card-navy rounded-3xl p-6 border border-zvb-border flex flex-col justify-between">
+                <div>
+                    <h3 class="font-display text-xl font-bold text-white">Polystyrene (GPPS & HIPS)</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        GPPS 1540 (crystal optical clarity) and HIPS 7240 (high impact strength) for food trays, sheets, dairy packaging and disposable cups.
+                    </p>
+                </div>
+                <a href="index.html#rfq" class="mt-6 w-full py-3 rounded-xl bg-zvb-deep border border-zvb-border hover:border-amber-400 text-white font-bold text-xs text-center block transition">
+                    Inquire GPPS / HIPS
+                </a>
+            </div>
+
+            <div class="card-navy rounded-3xl p-6 border border-zvb-border flex flex-col justify-between">
+                <div>
+                    <h3 class="font-display text-xl font-bold text-white">Bitumen 60/70</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        Penetration grade asphalt bitumen 60/70 in 180kg new steel drums or polybags for road construction and waterproofing.
+                    </p>
+                </div>
+                <a href="index.html#rfq" class="mt-6 w-full py-3 rounded-xl bg-zvb-deep border border-zvb-border hover:border-amber-400 text-white font-bold text-xs text-center block transition">
+                    Inquire Bitumen 60/70
+                </a>
+            </div>
+
+            <div class="card-navy rounded-3xl p-6 border border-zvb-border flex flex-col justify-between">
+                <div>
+                    <h3 class="font-display text-xl font-bold text-white">Industrial Fasteners (DIN/ISO)</h3>
+                    <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                        Precision high-tensile bolts, hex nuts, threaded rods (DIN 975, DIN 933) and self-drilling screws for PVC windows and metal framing.
+                    </p>
+                </div>
+                <a href="index.html#rfq" class="mt-6 w-full py-3 rounded-xl bg-zvb-deep border border-zvb-border hover:border-amber-400 text-white font-bold text-xs text-center block transition">
+                    Inquire Fasteners
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zvb-deep border-t border-zvb-border py-12 px-4 sm:px-6 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="logo_transparent.png" alt="Zagros Vitosha Bulgaria" class="h-12 w-auto">
+                <div>
+                    <span class="font-display text-white font-bold text-sm block">Zagros Vitosha Bulgaria Ltd.</span>
+                    <span class="text-[11px] text-slate-400">Sofia, Bulgaria • Discharge: Port of Varna, Burgas, Mersin & Istanbul</span>
+                </div>
+            </div>
+            <div class="text-slate-300 flex items-center space-x-6">
+                <a href="mailto:Zvbulgaria@gmail.com" class="hover:text-amber-400 transition">Zvbulgaria@gmail.com</a>
+                <a href="https://wa.me/359889700004" target="_blank" class="text-emerald-400 hover:underline">+359 88 970 0004</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobileDrawer');
+            drawer.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

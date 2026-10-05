@@ -124,12 +124,12 @@
             </a>
 
             <!-- Desktop Navigation Links -->
-            <div class="hidden lg:flex items-center space-x-7 text-xs font-bold text-slate-300 uppercase tracking-wider">
-                <a href="#products" class="hover:text-amber-400 transition" data-lang-key="nav_polymers">Polymers</a>
-                <a href="#gallery" class="hover:text-amber-400 transition" data-lang-key="nav_packaging">Packaging & Logistics</a>
-                <a href="#ports" class="hover:text-amber-400 transition" data-lang-key="nav_ports">Discharge Ports</a>
-                <a href="#tds" class="hover:text-amber-400 transition" data-lang-key="nav_tds">TDS Specifications</a>
-                <a href="#rfq" class="hover:text-amber-400 transition" data-lang-key="nav_rfq">RFQ Desk</a>
+            <div class="hidden lg:flex items-center space-x-6 text-xs font-bold text-slate-300 uppercase tracking-wider">
+                <a href="products.html" class="hover:text-amber-400 transition" data-lang-key="nav_polymers">Products & TDS</a>
+                <a href="compliance.html" class="hover:text-amber-400 transition" data-lang-key="nav_compliance">Compliance & COA</a>
+                <a href="logistics.html" class="hover:text-amber-400 transition" data-lang-key="nav_ports">Logistics & Ports</a>
+                <a href="about.html" class="hover:text-amber-400 transition" data-lang-key="nav_about">About Company</a>
+                <a href="#rfq" class="text-amber-400 hover:text-amber-300 transition" data-lang-key="nav_rfq">RFQ Desk</a>
             </div>
 
             <!-- Action Area: Language Switcher, WhatsApp & RFQ CTA -->
@@ -171,20 +171,20 @@
                 <span data-lang-key="btn_rfq_header">Request Official CIF Quotation</span>
             </a>
             <div class="flex flex-col space-y-4 text-sm font-bold uppercase tracking-wider text-slate-200">
-                <a href="#products" onclick="toggleMobileMenu()" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_polymers">
-                    <span>Polymers & Resins</span>
+                <a href="products.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_polymers">
+                    <span>Products & TDS Specs</span>
                     <i class="fa-solid fa-angle-right text-xs text-slate-500"></i>
                 </a>
-                <a href="#gallery" onclick="toggleMobileMenu()" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_packaging">
-                    <span>Export Packaging</span>
+                <a href="compliance.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_compliance">
+                    <span>Compliance & COA Vault</span>
                     <i class="fa-solid fa-angle-right text-xs text-slate-500"></i>
                 </a>
-                <a href="#ports" onclick="toggleMobileMenu()" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_ports">
-                    <span>Discharge Ports</span>
+                <a href="logistics.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_ports">
+                    <span>Logistics & Discharge Ports</span>
                     <i class="fa-solid fa-angle-right text-xs text-slate-500"></i>
                 </a>
-                <a href="#tds" onclick="toggleMobileMenu()" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_tds">
-                    <span>TDS Specifications</span>
+                <a href="about.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_about">
+                    <span>About Company</span>
                     <i class="fa-solid fa-angle-right text-xs text-slate-500"></i>
                 </a>
                 <a href="#rfq" onclick="toggleMobileMenu()" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between text-amber-400" data-lang-key="nav_rfq">
@@ -848,6 +848,28 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </section>
+
+    <!-- European Union Compliance & Certificate Vault Callout -->
+    <section class="py-12 bg-zvb-deep border-b border-zvb-border px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto card-navy rounded-3xl p-6 sm:p-10 border border-emerald-500/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <div class="flex items-center space-x-4 sm:space-x-5">
+                <div class="w-14 sm:w-16 h-14 sm:h-16 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl sm:text-3xl border border-emerald-500/20 flex-shrink-0">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Quality Assurance & Regulatory Vault</span>
+                    <h3 class="font-display text-lg sm:text-2xl font-bold text-white mt-1">EU REACH, RoHS Directives & SGS Port Inspection</h3>
+                    <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl">
+                        All polymer granules and suspension resins exported to European ports are fully REACH compliant (SVHC free), RoHS certified, and pre-inspected by SGS with certified batch COAs.
+                    </p>
+                </div>
+            </div>
+            <a href="compliance.html" class="w-full sm:w-auto flex-shrink-0 px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-emerald-400 transition shadow-lg text-center flex items-center justify-center space-x-2">
+                <span>Explore Compliance Vault & COA</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
         </div>
     </section>
 
