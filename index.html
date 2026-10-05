@@ -61,60 +61,61 @@
 </head>
 <body class="bg-[#060d1f] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
 
-    <!-- Top Announcement Bar (Fast Contacts) -->
-    <!-- Top Announcement Bar (Clean Mobile & Desktop) -->
-    <div class="bg-zvb-deep border-b border-zvb-border/60 text-xs py-2 px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-300 text-center sm:text-left">
-            <div class="flex items-center space-x-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-amber-400 font-semibold text-[11px] sm:text-xs">
-                    Direct Polymer Deliveries to Port of Varna & Mersin
-                </span>
-                <span class="hidden md:inline text-slate-500">|</span>
-                <span class="hidden md:inline text-slate-400 text-[11px]"><i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Sofia, Bulgaria</span>
-            </div>
-            <div class="flex items-center space-x-4 text-[11px] sm:text-xs text-slate-300">
-                <a href="mailto:Zvbulgaria@gmail.com" class="hover:text-amber-400 transition flex items-center">
-                    <i class="fa-solid fa-envelope text-amber-400 mr-1"></i> Zvbulgaria@gmail.com
-                </a>
-                <a href="https://wa.me/359889700004" target="_blank" class="hover:text-emerald-400 transition flex items-center font-bold text-emerald-400">
-                    <i class="fa-brands fa-whatsapp text-sm mr-1"></i> +359 88 970 0004
-                </a>
+    <!-- Unified Sleek Header (Zero Overlap, Perfect Mobile & Desktop) -->
+    <header class="sticky top-0 z-50 bg-[#060d1f]/95 backdrop-blur-md border-b border-zvb-border shadow-2xl">
+        <!-- Sub-bar for fast corporate contact (Desktop & Tablet only) -->
+        <div class="hidden sm:block bg-zvb-deep border-b border-zvb-border/40 text-[11px] py-1.5 px-6">
+            <div class="max-w-7xl mx-auto flex items-center justify-between text-slate-400">
+                <div class="flex items-center space-x-3">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-amber-400 font-semibold">Direct Polymer Shipments to Port of Varna & Mersin</span>
+                    <span>•</span>
+                    <span>Sofia, Bulgaria</span>
+                </div>
+                <div class="flex items-center space-x-6 text-slate-300">
+                    <a href="mailto:Zvbulgaria@gmail.com" class="hover:text-amber-400 transition flex items-center">
+                        <i class="fa-solid fa-envelope text-amber-400 mr-1.5"></i> Zvbulgaria@gmail.com
+                    </a>
+                    <a href="tel:+359877944353" class="hover:text-blue-400 transition flex items-center">
+                        <i class="fa-solid fa-phone text-blue-400 mr-1.5"></i> +359 87 794 4353
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Main Navigation (Ultra Clean & Responsive) -->
-    <nav class="sticky top-0 z-50 bg-[#09152e]/95 backdrop-blur-md border-b border-zvb-border shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
-            <a href="#" class="flex items-center space-x-2.5 sm:space-x-3.5 min-w-0">
-                <img src="logo_transparent.png" alt="Zagros Vitosha Bulgaria" class="h-10 sm:h-14 w-auto object-contain filter drop-shadow flex-shrink-0">
-                <div class="min-w-0">
-                    <span class="font-display text-lg sm:text-2xl font-black tracking-tight text-white block truncate leading-tight">ZAGROS VITOSHA</span>
-                    <span class="text-[9px] sm:text-[11px] uppercase tracking-wider sm:tracking-widest text-amber-400 font-bold block truncate">BULGARIA • POLYMERS</span>
+        <!-- Main Navigation Bar -->
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
+            <!-- Brand Logo & Name -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="logo_transparent.png" alt="Zagros Vitosha Bulgaria" class="h-10 sm:h-12 w-auto object-contain filter drop-shadow">
+                <div class="leading-tight">
+                    <span class="font-display text-base sm:text-xl font-black tracking-tight text-white block">ZAGROS VITOSHA</span>
+                    <span class="text-[9px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-bold block">BULGARIA • POLYMERS</span>
                 </div>
             </a>
 
-            <div class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-200">
-                <a href="#products" class="hover:text-amber-400 transition">Polymer Grades</a>
-                <a href="#gallery" class="hover:text-amber-400 transition">Packaging & Yard</a>
-                <a href="#ports" class="hover:text-amber-400 transition">Maritime Ports</a>
-                <a href="#tds" class="hover:text-amber-400 transition">TDS Specifications</a>
-                <a href="#rfq" class="hover:text-amber-400 transition">Request Quote (RFQ)</a>
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-7 text-xs font-bold text-slate-300 uppercase tracking-wider">
+                <a href="#products" class="hover:text-amber-400 transition">Polymers</a>
+                <a href="#gallery" class="hover:text-amber-400 transition">Packaging</a>
+                <a href="#ports" class="hover:text-amber-400 transition">Ports</a>
+                <a href="#tds" class="hover:text-amber-400 transition">TDS Specs</a>
+                <a href="#rfq" class="hover:text-amber-400 transition">RFQ Desk</a>
             </div>
 
-            <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
-                <a href="https://wa.me/359889700004?text=Hello%20Zagros%20Vitosha%20Bulgaria%2C%20I%20would%20like%20to%20inquire%20about%20CIF%20polymer%20prices." target="_blank" class="inline-flex items-center space-x-1.5 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-white transition font-bold text-xs tracking-wide">
+            <!-- Action Buttons (Mobile & Desktop) -->
+            <div class="flex items-center space-x-2">
+                <a href="https://wa.me/359889700004" target="_blank" class="inline-flex items-center space-x-1 px-3 py-2 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-white transition font-bold text-xs">
                     <i class="fa-brands fa-whatsapp text-sm"></i>
-                    <span class="hidden sm:inline">WhatsApp</span>
+                    <span class="text-[11px] sm:text-xs">+359 88 970 0004</span>
                 </a>
-                <a href="#rfq" class="inline-flex items-center space-x-1 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-extrabold text-[11px] sm:text-xs uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-md">
+                <a href="#rfq" class="inline-flex items-center space-x-1 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow">
                     <span>RFQ</span>
-                    <i class="fa-solid fa-arrow-right text-[9px] hidden sm:inline ml-1"></i>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <header class="hero-mesh pt-10 sm:pt-20 pb-16 sm:pb-24 px-4 sm:px-6 border-b border-zvb-border">
