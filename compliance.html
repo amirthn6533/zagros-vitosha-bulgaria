@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden w-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +39,11 @@
         }
     </script>
     <style>
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+            width: 100%;
+        }
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .hero-mesh {
             background-color: #060d1f;
@@ -91,7 +96,7 @@
     }
     </script>
 </head>
-<body class="bg-[#060d1f] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
+<body class="bg-[#060d1f] text-slate-100 antialiased selection:bg-amber-500 selection:text-black overflow-x-hidden w-full relative">
 
     <!-- Top Corporate Bar -->
     <div class="hidden md:block bg-zvb-deep border-b border-zvb-border/60 text-[11px] py-2 px-6">
