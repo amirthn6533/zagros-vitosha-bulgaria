@@ -40,7 +40,7 @@ class NumberedCanvas(canvas.Canvas):
         self.line(40, 42, 555, 42)
         self.setFont("Helvetica", 7.5)
         self.setFillColor(colors.HexColor('#64748b'))
-        self.drawString(40, 30, "UIC/EIK: 208619412 | VAT: BG208619412 | Sofia, Bulgaria | www.zvbt.eu | Zvbulgaria@gmail.com")
+        self.drawString(40, 30, "ZAGROS VITOSHA BULGARIA EOOD | Sofia HQ: bul. Vitosha 88 | Berlin: Friedrichstr. 123 | www.zvbt.eu")
         self.drawRightString(555, 30, f"Page {self._pageNumber} of {page_count}")
         self.restoreState()
 
@@ -127,10 +127,10 @@ def build_pdf(filename="zagros-vitosha-company-profile.pdf"):
         ],
         [
             Paragraph("<b>Registered VAT ID:</b> BG208619412", body_style),
-            Paragraph("<b>Headquarters:</b> Sofia Center, Sofia 1000, Bulgaria", body_style)
+            Paragraph("<b>Sofia HQ:</b> bul. Vitosha 88, 1463 Sofia, Bulgaria", body_style)
         ],
         [
-            Paragraph("<b>Core Activities:</b> International Polymer & Commodity Trade", body_style),
+            Paragraph("<b>Berlin Liaison Desk:</b> Friedrichstr. 123, 10117 Berlin, Germany", body_style),
             Paragraph("<b>Logistics Corridors:</b> Ports of Varna, Burgas, Mersin & Inland DAP", body_style)
         ]
     ]
@@ -311,9 +311,11 @@ def build_pdf(filename="zagros-vitosha-company-profile.pdf"):
                       "• Phone / WhatsApp: +359 87 794 4353<br/><br/>"
                       "<b>Head of Commercial & Export:</b><br/>"
                       "• Phone / WhatsApp: +359 88 970 0004<br/><br/>"
-                      "<b>Official Web:</b> www.zvbt.eu<br/>"
-                      "<b>Corporate Email:</b> Zvbulgaria@gmail.com<br/>"
-                      "<b>Registered Office:</b> Sofia Center, Sofia 1000, Bulgaria", body_style)
+                      "<b>Official Web:</b> www.zvbt.eu | <b>Email:</b> Zvbulgaria@gmail.com<br/><br/>"
+                      "<b>Bulgaria Headquarters:</b><br/>"
+                      "• bul. Vitosha 88, Triaditsa, 1463 Sofia, Republic of Bulgaria<br/><br/>"
+                      "<b>Germany Commercial Liaison Office:</b><br/>"
+                      "• Friedrichstraße 123, 10117 Berlin-Mitte, Germany", body_style)
         ]
     ]
 
