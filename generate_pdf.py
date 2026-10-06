@@ -40,7 +40,7 @@ class NumberedCanvas(canvas.Canvas):
         self.line(40, 42, 555, 42)
         self.setFont("Helvetica", 7.5)
         self.setFillColor(colors.HexColor('#64748b'))
-        self.drawString(40, 30, "UIC/EIK: 208619412 | VAT: BG208619412 | Sofia, Republic of Bulgaria | Zvbulgaria@gmail.com")
+        self.drawString(40, 30, "UIC/EIK: 208619412 | VAT: BG208619412 | Sofia, Bulgaria | www.zvbt.eu | Zvbulgaria@gmail.com")
         self.drawRightString(555, 30, f"Page {self._pageNumber} of {page_count}")
         self.restoreState()
 
@@ -311,6 +311,7 @@ def build_pdf(filename="zagros-vitosha-company-profile.pdf"):
                       "• Phone / WhatsApp: +359 87 794 4353<br/><br/>"
                       "<b>Head of Commercial & Export:</b><br/>"
                       "• Phone / WhatsApp: +359 88 970 0004<br/><br/>"
+                      "<b>Official Web:</b> www.zvbt.eu<br/>"
                       "<b>Corporate Email:</b> Zvbulgaria@gmail.com<br/>"
                       "<b>Registered Office:</b> Sofia Center, Sofia 1000, Bulgaria", body_style)
         ]
