@@ -172,6 +172,9 @@
                 <a href="compliance.html" class="hover:text-amber-400 transition" data-lang-key="nav_compliance">Compliance & COA</a>
                 <a href="logistics.html" class="hover:text-amber-400 transition" data-lang-key="nav_ports">Logistics & Ports</a>
                 <a href="about.html" class="hover:text-amber-400 transition" data-lang-key="nav_about">About Company</a>
+                <a href="zagros-vitosha-company-profile.pdf" download class="hover:text-amber-400 text-amber-400/90 transition flex items-center" title="Download Official Company Profile PDF">
+                    <i class="fa-solid fa-file-pdf mr-1 text-xs text-amber-400"></i> Profile PDF
+                </a>
                 <a href="#rfq" class="text-amber-400 hover:text-amber-300 transition" data-lang-key="nav_rfq">RFQ Desk</a>
             </div>
 
@@ -209,9 +212,14 @@
         <!-- Slide-down Mobile Navigation Drawer -->
         <div id="mobileDrawer" class="hidden lg:hidden border-t border-zvb-border bg-[#060d1f]/98 backdrop-blur-xl px-5 py-6 transition-all duration-300 ease-in-out">
             <!-- Full-width RFQ Button inside Mobile Drawer -->
-            <a href="#rfq" onclick="toggleMobileMenu()" class="w-full mb-5 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider text-center block transition shadow-lg flex items-center justify-center space-x-2">
+            <a href="#rfq" onclick="toggleMobileMenu()" class="w-full mb-3 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider text-center block transition shadow-lg flex items-center justify-center space-x-2">
                 <i class="fa-solid fa-file-invoice text-sm"></i>
                 <span data-lang-key="btn_rfq_header">Request Official CIF Quotation</span>
+            </a>
+            <!-- Full-width PDF Download inside Mobile Drawer -->
+            <a href="zagros-vitosha-company-profile.pdf" download class="w-full mb-5 py-3 rounded-xl bg-zvb-card border border-zvb-border text-slate-200 font-bold text-xs uppercase tracking-wider text-center block transition shadow flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-file-pdf text-amber-400 text-sm"></i>
+                <span>Download Company Profile (PDF)</span>
             </a>
             <div class="flex flex-col space-y-4 text-sm font-bold uppercase tracking-wider text-slate-200">
                 <a href="products.html" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_polymers">
@@ -284,13 +292,17 @@
                     </p>
 
                     <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
-                        <a href="#rfq" class="w-full sm:w-auto px-6 sm:px-9 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/25 flex items-center justify-center text-center">
+                        <a href="#rfq" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/25 flex items-center justify-center text-center">
                             <i class="fa-solid fa-file-invoice mr-2 text-sm sm:text-base shrink-0"></i>
                             <span data-lang-key="hero_cta_quote">Request Official CIF Quotation</span>
                         </a>
-                        <a href="#tds" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-zvb-navy border border-zvb-border text-white font-bold text-xs sm:text-sm hover:border-blue-400 hover:bg-zvb-blue/30 transition flex items-center justify-center text-center">
+                        <a href="zagros-vitosha-company-profile.pdf" download class="w-full sm:w-auto px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-zvb-card border border-zvb-border hover:border-amber-400 text-slate-200 hover:text-white font-bold text-xs sm:text-sm transition flex items-center justify-center text-center">
+                            <i class="fa-solid fa-file-pdf mr-2 text-amber-400 shrink-0"></i>
+                            <span data-lang-key="hero_cta_pdf">Company Profile (PDF)</span>
+                        </a>
+                        <a href="#tds" class="w-full sm:w-auto px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-zvb-navy border border-zvb-border text-white font-bold text-xs sm:text-sm hover:border-blue-400 hover:bg-zvb-blue/30 transition flex items-center justify-center text-center">
                             <i class="fa-solid fa-table-list mr-2 text-amber-400 shrink-0"></i>
-                            <span data-lang-key="hero_cta_tds">View TDS Specifications</span>
+                            <span data-lang-key="hero_cta_tds">TDS Specs</span>
                         </a>
                     </div>
 
@@ -301,8 +313,8 @@
                             <div class="text-[9px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider mt-0.5 leading-tight truncate" data-lang-key="badge_1">Virgin Prime Sourced</div>
                         </div>
                         <div class="min-w-0 px-1 border-x border-zvb-border/60 sm:border-0">
-                            <div class="text-lg sm:text-3xl font-black text-amber-400 font-display">CIF / CFR</div>
-                            <div class="text-[9px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider mt-0.5 leading-tight truncate" data-lang-key="badge_2">Incoterms (CIF/CFR)</div>
+                            <div class="text-lg sm:text-3xl font-black text-amber-400 font-display">CIF / DAP</div>
+                            <div class="text-[9px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider mt-0.5 leading-tight truncate" data-lang-key="badge_2">Incoterms (CIF / CFR / DAP)</div>
                         </div>
                         <div class="min-w-0 pl-1">
                             <div class="text-lg sm:text-3xl font-black text-emerald-400 font-display">SGS / COA</div>
@@ -333,15 +345,15 @@
                             <div class="bg-zvb-deep/80 rounded-2xl p-4 border border-zvb-border/60">
                                 <div class="flex items-center justify-between text-xs">
                                     <span class="text-slate-400" data-lang-key="terminal_commodity">Primary Commodities</span>
-                                    <span class="text-white font-bold">HDPE Film, PP Raffia, S-PVC K67</span>
+                                    <span class="text-white font-bold">HDPE, LDPE, PP Raffia, S-PVC K67</span>
                                 </div>
                                 <div class="mt-2 flex items-center justify-between text-xs">
-                                    <span class="text-slate-400" data-lang-key="terminal_ports">Regular Discharge Ports</span>
-                                    <span class="text-amber-400 font-semibold">Port of Varna & Mersin</span>
+                                    <span class="text-slate-400">Logistics & Incoterms</span>
+                                    <span class="text-amber-400 font-semibold">CIF Varna/Burgas & DAP Trucking</span>
                                 </div>
                                 <div class="mt-2 flex items-center justify-between text-xs">
-                                    <span class="text-slate-400" data-lang-key="terminal_load">Typical Container Load</span>
-                                    <span class="text-slate-200 font-semibold">Approx. 24–25 MT / 40' HC</span>
+                                    <span class="text-slate-400">Origin Verification</span>
+                                    <span class="text-emerald-400 font-semibold">Certified Batch COA & Proforma</span>
                                 </div>
                             </div>
 
@@ -1187,8 +1199,9 @@
                         <select id="incoterm" required class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white focus:outline-none focus:border-amber-400 text-sm">
                             <option value="CIF (Cost, Insurance & Freight)">CIF (Freight + Marine Insurance Included)</option>
                             <option value="CFR (Cost & Freight)">CFR (Freight Included; Insurance by Buyer)</option>
-                            <option value="FOB (Free on Board Loading Port)">FOB (Loading Port Terminal)</option>
+                            <option value="DAP (Delivered at Place - Truck to Factory Door)">DAP (Truck Delivery to Factory Door)</option>
                             <option value="FCA (Free Carrier)">FCA (Bonded Transit / Terminal)</option>
+                            <option value="FOB (Free on Board Loading Port)">FOB (Loading Port Terminal)</option>
                         </select>
                     </div>
                     <div>
@@ -1538,9 +1551,10 @@
                 hero_title_2: "Port of Varna & Regional Hubs",
                 hero_desc: "Zagros Vitosha Bulgaria supplies top-tier petrochemical raw materials: Polyethylene (HDPE / LDPE / LLDPE), Polypropylene (PP), Suspension PVC Resin (S-PVC K67), Polystyrene, Bitumen 60/70, and Fasteners on verified CIF/CFR terms to Port of Varna, Burgas, Mersin & Istanbul.",
                 hero_cta_quote: "Request Official CIF Quotation",
-                hero_cta_tds: "View TDS Specifications",
+                hero_cta_pdf: "Company Profile (PDF)",
+                hero_cta_tds: "TDS Specs",
                 badge_1: "Virgin Prime Grades",
-                badge_2: "Incoterms (CIF / CFR)",
+                badge_2: "Incoterms (CIF / CFR / DAP)",
                 badge_3: "Manufacturer Batch COA Included",
                 terminal_title: "Commercial Dispatch Desk",
                 terminal_commodity: "Primary Commodities",
@@ -1600,9 +1614,10 @@
                 hero_title_2: "Пристанище Варна и региона",
                 hero_desc: "Загрос Витоша България доставя висококачествени петрохимични суровини: Полиетилен (HDPE / LDPE / LLDPE), Полипропилен (PP), Суспензионно PVC (S-PVC K67), Полистирен, Битум 60/70 и крепежни елементи при условия CIF/CFR до Пристанище Варна, Бургас, Мерсин и Истанбул.",
                 hero_cta_quote: "Заявете официална CIF оферта",
-                hero_cta_tds: "Преглед на TDS спецификации",
+                hero_cta_pdf: "Фирмен профил (PDF)",
+                hero_cta_tds: "TDS Спецификации",
                 badge_1: "100% Първичен гранулат",
-                badge_2: "Incoterms (CIF / CFR)",
+                badge_2: "Incoterms (CIF / CFR / DAP)",
                 badge_3: "SGS и Лабораторен COA",
                 terminal_title: "Търговско-диспечерски отдел",
                 terminal_commodity: "Основни суровини",
