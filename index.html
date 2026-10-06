@@ -1157,7 +1157,7 @@
             </div>
 
             <form id="rfqForm" onsubmit="handleRFQSubmit(event)" class="space-y-6">
-                <div class="grid sm:grid-cols-2 gap-6">
+                <div class="grid sm:grid-cols-3 gap-6">
                     <div>
                         <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-lang-key="rfq_company_label">Company Name *</label>
                         <input type="text" id="company" required placeholder="e.g. Profilink / Megaport / Balkan Plastics" class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 text-sm">
@@ -1165,6 +1165,10 @@
                     <div>
                         <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-lang-key="rfq_email_label">Corporate Email *</label>
                         <input type="email" id="email" required placeholder="purchasing@company.com" class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Phone / WhatsApp *</label>
+                        <input type="tel" id="phone" required placeholder="+359... / +49... / +90..." class="w-full px-4 py-3.5 rounded-xl bg-zvb-deep border border-zvb-border text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 text-sm">
                     </div>
                 </div>
 
@@ -1234,14 +1238,34 @@
 
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
                     <div class="text-xs text-slate-400 flex items-center space-x-2">
-                        <i class="fa-solid fa-lock text-amber-400"></i>
-                        <span>Direct delivery to: <strong class="text-white">Zvbulgaria@gmail.com</strong></span>
+                        <i class="fa-solid fa-lock text-emerald-400"></i>
+                        <span>Automated Dispatch to: <strong class="text-white">Zvbulgaria@gmail.com</strong></span>
                     </div>
-                    <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/25" data-lang-key="rfq_submit_btn">
-                        Submit Official RFQ
+                    <button type="submit" id="rfqSubmitBtn" class="w-full sm:w-auto px-10 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/25 flex items-center justify-center space-x-2">
+                        <span id="rfqBtnText" data-lang-key="rfq_submit_btn">Submit Official RFQ</span>
+                        <i id="rfqBtnIcon" class="fa-solid fa-paper-plane text-xs"></i>
                     </button>
                 </div>
             </form>
+
+            <!-- RFQ Success Box -->
+            <div id="rfqSuccessBox" class="hidden p-8 rounded-3xl bg-emerald-500/10 border-2 border-emerald-500/30 text-center space-y-4">
+                <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto text-2xl">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white">Official RFQ Dispatched Successfully!</h3>
+                <p id="rfqSuccessMsg" class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+                    Your commercial inquiry has been transmitted directly to Zagros Vitosha Bulgaria EOOD Commercial Desk. Our export team will evaluate your volume allocation and prepare a formal proforma offer within 4 business hours.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/359877944353?text=Hello%2C%20I%20just%20submitted%20an%20RFQ%20on%20zvbt.eu" target="_blank" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp mr-2 text-base"></i> Fast-Track on WhatsApp (+359 87 794 4353)
+                    </a>
+                    <button type="button" onclick="resetRFQForm()" class="px-6 py-3 rounded-xl bg-zvb-deep border border-zvb-border hover:border-amber-400 text-slate-300 hover:text-white font-bold text-xs uppercase tracking-wider transition">
+                        Submit Another RFQ
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1559,36 +1583,89 @@
             document.getElementById('rfq').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function handleRFQSubmit(e) {
+        async function handleRFQSubmit(e) {
             e.preventDefault();
+            const btn = document.getElementById('rfqSubmitBtn');
+            const btnText = document.getElementById('rfqBtnText');
+            const btnIcon = document.getElementById('rfqBtnIcon');
+            const form = document.getElementById('rfqForm');
+            const successBox = document.getElementById('rfqSuccessBox');
+            const successMsg = document.getElementById('rfqSuccessMsg');
+
             const company = document.getElementById('company').value;
             const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             const commodity = document.getElementById('commodity').value;
             const volume = document.getElementById('volume').value;
             const destination = document.getElementById('destination').value;
+            const incoterm = document.getElementById('incoterm').value;
+            const payment = document.getElementById('payment').value;
+            const frequency = document.getElementById('frequency').value;
             const notes = document.getElementById('notes').value;
 
-            const subject = encodeURIComponent(`RFQ: ${commodity} for ${company} (${volume}) - Zagros Vitosha Bulgaria`);
-            const body = encodeURIComponent(
-                `Official RFQ Submission to Zagros Vitosha Bulgaria EOOD:\n\n` +
-                `Company Name: ${company}\n` +
-                `Corporate Email: ${email}\n` +
-                `Requested Commodity: ${commodity}\n` +
-                `Target Volume: ${volume}\n` +
-                `Destination Port: ${destination}\n` +
-                `Specifications & Notes: ${notes}\n\n` +
-                `----------------------------------------\n` +
-                `Commercial Desk Details:\n` +
-                `Company: Zagros Vitosha Bulgaria EOOD\n` +
-                `Corporate Email: Zvbulgaria@gmail.com\n` +
-                `Managing Director (CEO): +359 87 794 4353\n` +
-                `Head of Commercial & Export (WhatsApp): +359 88 970 0004\n` +
-                `Sofia, Bulgaria`
-            );
+            // Loading state
+            btn.disabled = true;
+            btnText.textContent = "Transmitting to Commercial Desk...";
+            btnIcon.className = "fa-solid fa-spinner fa-spin text-xs";
 
-            // Open Gmail compose directly
-            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=Zvbulgaria@gmail.com&su=${subject}&body=${body}`, '_blank');
-            alert('Your official RFQ draft is ready! You can send it directly to our export desk at Zvbulgaria@gmail.com.');
+            try {
+                const response = await fetch("https://formsubmit.co/ajax/Zvbulgaria@gmail.com", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        _subject: `[ZVB RFQ] ${commodity} - ${company} (${volume})`,
+                        _template: "table",
+                        _captcha: "false",
+                        "Company Name": company,
+                        "Corporate Email": email,
+                        "Phone / WhatsApp": phone || "Not provided",
+                        "Requested Commodity": commodity,
+                        "Target Volume": volume,
+                        "Destination Port": destination,
+                        "Preferred Incoterms": incoterm,
+                        "Payment Instrument": payment,
+                        "Order Frequency": frequency,
+                        "Technical Specifications / Notes": notes || "None provided",
+                        "_source": "zvbt.eu official trade terminal"
+                    })
+                });
+
+                if (response.ok) {
+                    form.classList.add('hidden');
+                    successBox.classList.remove('hidden');
+                    if (successMsg) {
+                        successMsg.innerHTML = `Thank you, <strong>${company}</strong>. Your commercial inquiry for <strong>${commodity} (${volume})</strong> has been logged. An official proforma quotation with current CIF/CFR rates will be dispatched to <strong>${email}</strong> within 4 business hours.`;
+                    }
+                    successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error("Transmission error");
+                }
+            } catch (err) {
+                // Fallback to direct Gmail compose
+                const subject = encodeURIComponent(`[RFQ] ${commodity} for ${company} (${volume})`);
+                const body = encodeURIComponent(
+                    `Company: ${company}\nEmail: ${email}\nPhone: ${phone}\nCommodity: ${commodity}\nVolume: ${volume}\nDestination: ${destination}\nIncoterms: ${incoterm}\nPayment: ${payment}\nNotes: ${notes}`
+                );
+                window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=Zvbulgaria@gmail.com&su=${subject}&body=${body}`, '_blank');
+                form.classList.add('hidden');
+                successBox.classList.remove('hidden');
+            } finally {
+                btn.disabled = false;
+                btnText.textContent = "Submit Official RFQ";
+                btnIcon.className = "fa-solid fa-paper-plane text-xs";
+            }
+        }
+
+        function resetRFQForm() {
+            const form = document.getElementById('rfqForm');
+            const successBox = document.getElementById('rfqSuccessBox');
+            form.reset();
+            successBox.classList.add('hidden');
+            form.classList.remove('hidden');
+            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         // Dual-Language Dictionary (EN / BG)
