@@ -1,0 +1,19 @@
+{
+  "name": "Zagros Vitosha Bulgaria EOOD",
+  "short_name": "Zagros Vitosha",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#060d1f",
+  "background_color": "#060d1f",
+  "display": "standalone"
+}
