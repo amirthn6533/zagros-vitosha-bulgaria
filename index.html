@@ -78,6 +78,44 @@
         ::-webkit-scrollbar-thumb { background: #1f2f54; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
     </style>
+    <!-- Google Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      "name": "Zagros Vitosha Bulgaria EOOD",
+      "legalName": "Zagros Vitosha Bulgaria EOOD",
+      "alternateName": "Загрос Витоша България ЕООД",
+      "url": "https://amirthn6533.github.io/zagros-vitosha-bulgaria/",
+      "logo": "https://amirthn6533.github.io/zagros-vitosha-bulgaria/logo.jpg",
+      "identifier": "208619412",
+      "taxID": "BG208619412",
+      "description": "Sofia-based Bulgarian trading and sourcing company specializing in prime virgin polymers (HDPE, LDPE, PP, S-PVC), Bitumen 60/70, and industrial commodities with maritime logistics to Port of Varna, Burgas, Mersin and regional hubs.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sofia Center",
+        "addressLocality": "Sofia",
+        "postalCode": "1000",
+        "addressCountry": "BG"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+359-88-970-0004",
+          "contactType": "sales",
+          "areaServed": ["BG", "EU", "TR", "RO", "GR"],
+          "availableLanguage": ["English", "Bulgarian"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+359-87-794-4353",
+          "contactType": "executive",
+          "areaServed": ["BG", "EU"],
+          "availableLanguage": ["English", "Bulgarian"]
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-[#060d1f] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
 
@@ -338,7 +376,7 @@
     <section id="products" class="py-24 px-4 sm:px-6 max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
-                <span class="text-amber-400 font-bold tracking-widest text-xs uppercase" data-lang-key="products_eyebrow">Certified Export Range</span>
+                <span class="text-amber-400 font-bold tracking-widest text-xs uppercase" data-lang-key="products_eyebrow">Core Polymer & Commodity Portfolio</span>
                 <h2 class="font-display text-3xl sm:text-5xl font-black text-white mt-2" data-lang-key="products_heading">Core Polymer & Commodity Grades</h2>
             </div>
             <p class="text-slate-400 max-w-md text-xs sm:text-sm mt-4 md:mt-0 leading-relaxed" data-lang-key="products_sub">
@@ -612,11 +650,11 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
                 <div>
-                    <span class="text-amber-400 font-bold tracking-widest text-xs uppercase" data-lang-key="gallery_eyebrow">Visual Quality Proof</span>
+                    <span class="text-amber-400 font-bold tracking-widest text-xs uppercase" data-lang-key="gallery_eyebrow">Typical Packaging & Handling</span>
                     <h2 class="font-display text-3xl sm:text-4xl font-black text-white mt-1" data-lang-key="gallery_heading">Export Packaging, Palletization & Port Handling</h2>
                 </div>
                 <p class="text-slate-400 text-xs sm:text-sm max-w-md mt-3 md:mt-0" data-lang-key="gallery_sub">
-                    Direct photographic standards of our heavy-duty 25kg bags, heat-treated fumigated pallets, and reinforced 40' container stuffing.
+                    Typical export packaging standards: heavy-duty 25kg multi-ply valve bags, heat-treated fumigated pallets, and reinforced 40' container stuffing.
                 </p>
             </div>
 
@@ -928,7 +966,7 @@
                 <div>
                     <span class="text-amber-400 font-bold tracking-widest text-xs uppercase" data-lang-key="tds_eyebrow">Certified Laboratory Parameters</span>
                     <h2 class="font-display text-3xl font-black text-white mt-1" data-lang-key="tds_heading">Technical Datasheet (TDS) Specifications</h2>
-                    <p class="text-slate-400 text-xs sm:text-sm mt-1" data-lang-key="tds_sub">Lab-verified values according to international ASTM and ISO standards.</p>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-1" data-lang-key="tds_sub">Typical Technical Specifications — subject to manufacturer TDS and batch COA.</p>
                 </div>
                 <div>
                     <span class="px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold">
@@ -1033,7 +1071,7 @@
                     <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Quality Assurance & Regulatory Vault</span>
                     <h3 class="font-display text-lg sm:text-2xl font-bold text-white mt-1">EU REACH, RoHS Directives & SGS Port Inspection</h3>
                     <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl">
-                        All polymer granules and suspension resins exported to European ports are fully REACH compliant (SVHC free), RoHS certified, and pre-inspected by SGS with certified batch COAs.
+                        All polymer granules and suspension resins exported to European ports are fully REACH compliant (SVHC free), RoHS certified, and backed by certified manufacturer batch COAs, with SGS inspection available upon request.
                     </p>
                 </div>
             </div>
@@ -1410,7 +1448,7 @@
         // Dual-Language Dictionary (EN / BG)
         const translations = {
             en: {
-                top_status: "PORTS DISPATCH ACTIVE",
+                top_status: "CURRENT SUPPLY & ALLOCATION AVAILABLE",
                 top_shipment: "Direct Polymer Containers to Port of Varna, Burgas & Mersin",
                 top_location: "Sofia, Bulgaria",
                 nav_polymers: "Polymers",
@@ -1427,38 +1465,38 @@
                 hero_cta_quote: "Request Official CIF Quotation",
                 hero_cta_tds: "View TDS Specifications",
                 badge_1: "Virgin Prime Grades",
-                badge_2: "Incoterms 2020 Insured",
-                badge_3: "Full Lab Inspected",
+                badge_2: "CIF (Marine Insurance Included) / CFR",
+                badge_3: "Manufacturer Batch COA Included",
                 terminal_title: "Commercial Dispatch Desk",
                 terminal_commodity: "Primary Commodities",
                 terminal_ports: "Regular Discharge Ports",
                 terminal_load: "Container FCL Capacity",
                 terminal_channels: "Direct Negotiation Channels",
                 terminal_cta: "Inquire Current Tonnage & CIF Prices",
-                products_eyebrow: "Certified Export Range",
+                products_eyebrow: "Core Polymer & Commodity Portfolio",
                 products_heading: "Core Polymer & Commodity Grades",
                 products_sub: "Prime petrochemical raw materials with consistent Melt Flow Index (MFI) and density parameters, shipped in heavy-duty 25kg bags on shrink-wrapped pallets.",
-                gallery_eyebrow: "Visual Quality Proof",
+                gallery_eyebrow: "Typical Packaging & Handling",
                 gallery_heading: "Export Packaging, Palletization & Port Handling",
-                gallery_sub: "Direct photographic standards of our heavy-duty 25kg bags, heat-treated fumigated pallets, and reinforced 40' container stuffing.",
+                gallery_sub: "Typical export packaging standards: heavy-duty 25kg multi-ply valve bags, heat-treated fumigated pallets, and reinforced 40' container stuffing.",
                 gal_card1_title: "Palletized & Shrink-Wrapped",
                 gal_card1_desc: "Moisture-proof multi-layer bags stacked neatly on fumigated wooden pallets with reinforced UV-resistant stretch hooding.",
                 gal_card2_title: "Container Stuffing & Dunnage",
                 gal_card2_desc: "Inflatable dunnage air bags and heavy-duty polyester lashing to prevent any pallet movement during sea transit.",
                 gal_card3_title: "Direct Port Discharging",
-                gal_card3_desc: "Direct container discharge at Varna-West and Mersin Port with seamless bonded transit and fast customs clearance.",
+                gal_card3_desc: "Direct container discharge at Varna-West and Mersin Port with customs documentation and logistics coordination available.",
                 gal_card4_title: "Batch Quality Verification",
-                gal_card4_desc: "Every single lot is tested for melt flow index, density, moisture, and tensile strength before container gate-in.",
+                gal_card4_desc: "Manufacturer batch COA included with shipping documents; third-party SGS inspection available upon request.",
                 ports_eyebrow: "Strategic Maritime Hubs",
                 ports_heading: "Connecting Petrochemicals Directly to Ports",
-                ports_sub: "We partner with tier-1 global carriers (MSC, Maersk, Arkas) ensuring fast customs clearance and direct overland dispatch across Bulgaria and the Balkans.",
+                ports_sub: "We partner with tier-1 global carriers (MSC, Maersk, Arkas) ensuring proper customs documentation and reliable logistics coordination to Bulgarian and Balkan destinations.",
                 port_varna_desc: "Container terminal at Varna-West and Varna-East. Fast truck delivery direct to manufacturing clusters in Sofia, Plovdiv, Ruse & Asenovgrad.",
                 port_burgas_desc: "Deep-sea container handling terminal with direct highway and rail links to Central and Southern Bulgarian industrial zones.",
                 port_mersin_desc: "Major East Mediterranean petrochemical hub with bonded free zone warehousing, fast transshipment, and high-frequency feeder lines.",
                 port_istanbul_desc: "Serving the dense plastics processing clusters of İkitelli, Gebze, and Çerkezköy with minimal ocean transit times.",
                 tds_eyebrow: "Certified Laboratory Parameters",
                 tds_heading: "Technical Datasheet (TDS) Specifications",
-                tds_sub: "Lab-verified values according to international ASTM and ISO standards.",
+                tds_sub: "Typical Technical Specifications — subject to manufacturer TDS and batch COA.",
                 rfq_eyebrow: "Direct Commercial Desk",
                 rfq_heading: "Submit Formal Request for Quotation (RFQ)",
                 rfq_sub: "Certified technical datasheets, official proforma quotations, and CIF rates prepared within 4 business hours.",
