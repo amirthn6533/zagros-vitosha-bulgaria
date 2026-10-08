@@ -1,0 +1,28 @@
+# Ignore large VM files, images and executables
+*.vmdk
+*.vmx
+*.vmxf
+*.vmsd
+*.nvram
+*.scoreboard
+*.log
+*.exe
+*.pdf
+*.zip
+*.log
+
+# Whitelist website media assets
+!logo.jpg
+!favicon.ico
+!ldpe_*.jpg
+!*.mp4
+!website/**
+
+# Sensitive files
+.env
+__pycache__/
+*.pyc
+.system_generated/
+ad_bot/
+google_review_qr/
+lunch_menu_generator/
