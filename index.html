@@ -1337,7 +1337,12 @@
                 rfq_destination_label: "Destination Port *",
                 rfq_notes_label: "Technical Parameters (MFI, Application, Payment Terms)",
                 rfq_submit_btn: "Submit Official RFQ",
-                footer_subtitle: "International Bulk Polymers, Petrochemicals & Commodity Exporter • Sofia, Bulgaria"
+                footer_subtitle: "International Bulk Polymers, Petrochemicals & Commodity Exporter • Sofia, Bulgaria",
+                cookie_title: "Cookie & Privacy Consent",
+                cookie_sub: "EU GDPR & ePrivacy Compliant",
+                cookie_desc: "Zagros Vitosha Bulgaria uses technical and security cookies to guarantee verified B2B trading terminal operations, RFQ encryption, and fast delivery to Port of Varna & Mersin in accordance with EU GDPR Regulation (2016/679).",
+                cookie_accept: "Accept All Cookies",
+                cookie_essential: "Essential Only"
             },
             bg: {
                 top_status: "АКТИВНА ЕКСПЕДИЦИЯ",
@@ -1399,7 +1404,12 @@
                 rfq_destination_label: "Пристанище на доставка *",
                 rfq_notes_label: "Технически изисквания (MFI, приложение, условия на плащане)",
                 rfq_submit_btn: "Изпратете официално RFQ запитване",
-                footer_subtitle: "Международен доставчик на полимери, петрохимия и крепежни елементи • София, България"
+                footer_subtitle: "Международен доставчик на полимери, петрохимия и крепежни елементи • София, България",
+                cookie_title: "Политика за поверителност и бисквитки",
+                cookie_sub: "Съобразено с регламента GDPR на ЕС",
+                cookie_desc: "Загрос Витоша България използва технически бисквитки за сигурни B2B операции, криптиране на запитванията (RFQ) и бърза доставка до пристанище Варна и Мерсин съгласно Регламент (ЕС) 2016/679 (GDPR).",
+                cookie_accept: "Приемам всички",
+                cookie_essential: "Само основни"
             }
         };
 
@@ -1544,6 +1554,87 @@
         function goToSlide(idx) {
             currentSlideIdx = idx;
             updateSlider();
+        }
+    </script>
+
+    <!-- EU GDPR Cookie Consent Modal (Centered in Page) -->
+    <div id="cookieConsentBanner" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm hidden transition-opacity duration-300">
+        <div class="card-navy border border-amber-500/30 shadow-2xl rounded-3xl p-6 sm:p-7 max-w-md w-full text-slate-300 space-y-4 relative">
+            <!-- Header Icon & Title -->
+            <div class="flex items-center justify-between border-b border-zvb-border/60 pb-3.5">
+                <div class="flex items-center space-x-3 text-white font-bold text-sm sm:text-base">
+                    <div class="w-9 h-9 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center text-sm">
+                        <i class="fa-solid fa-cookie-bite text-base"></i>
+                    </div>
+                    <div>
+                        <span class="text-white block font-display" data-lang-key="cookie_title">Cookie & Privacy Consent</span>
+                        <span class="text-[10px] text-amber-400 font-semibold uppercase tracking-wider block" data-lang-key="cookie_sub">EU GDPR & ePrivacy Compliant</span>
+                    </div>
+                </div>
+                <button onclick="closeCookieBanner()" class="text-slate-400 hover:text-white p-1.5 rounded-xl bg-zvb-deep border border-zvb-border transition" title="Dismiss">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <!-- Description Text -->
+            <p class="text-slate-400 leading-relaxed text-xs" data-lang-key="cookie_desc">
+                Zagros Vitosha Bulgaria uses technical and security cookies to guarantee verified B2B trading terminal operations, RFQ encryption, and fast delivery to Port of Varna & Mersin in accordance with <strong class="text-slate-200">EU GDPR Regulation (2016/679)</strong>.
+            </p>
+
+            <!-- Feature Pills -->
+            <div class="flex flex-wrap gap-2 text-[11px] text-slate-300 py-1">
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg bg-zvb-deep border border-zvb-border text-emerald-400 font-semibold">
+                    <i class="fa-solid fa-shield-halved text-[10px] mr-1.5"></i> SSL Encrypted RFQ
+                </span>
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg bg-zvb-deep border border-zvb-border text-blue-400 font-semibold">
+                    <i class="fa-solid fa-server text-[10px] mr-1.5"></i> Sofia Data Security
+                </span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2.5 pt-2">
+                <button onclick="acceptAllCookies()" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider transition shadow-lg shadow-amber-500/25 text-center" data-lang-key="cookie_accept">
+                    Accept All Cookies
+                </button>
+                <button onclick="acceptEssentialCookies()" class="py-3 px-4 rounded-xl bg-zvb-deep border border-zvb-border hover:border-slate-500 text-slate-300 hover:text-white font-bold text-xs uppercase tracking-wider transition text-center" data-lang-key="cookie_essential">
+                    Essential Only
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Centered EU GDPR Cookie Modal Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('zvb_cookie_consent')) {
+                const banner = document.getElementById('cookieConsentBanner');
+                if (banner) {
+                    banner.classList.remove('hidden');
+                }
+            }
+        });
+
+        function acceptAllCookies() {
+            localStorage.setItem('zvb_cookie_consent', 'accepted_all');
+            hideCookieBanner();
+        }
+
+        function acceptEssentialCookies() {
+            localStorage.setItem('zvb_cookie_consent', 'essential_only');
+            hideCookieBanner();
+        }
+
+        function closeCookieBanner() {
+            localStorage.setItem('zvb_cookie_consent', 'dismissed');
+            hideCookieBanner();
+        }
+
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookieConsentBanner');
+            if (banner) {
+                banner.classList.add('opacity-0');
+                setTimeout(() => banner.classList.add('hidden'), 250);
+            }
         }
     </script>
 </body>
