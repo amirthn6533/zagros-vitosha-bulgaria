@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отваряне на Viber...</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f4f3fb;
+            color: #2b2b2b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .card {
+            background: #ffffff;
+            padding: 32px 24px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(115, 96, 242, 0.15);
+            max-width: 380px;
+            width: 100%;
+        }
+        .viber-icon {
+            width: 72px;
+            height: 72px;
+            background: #7360f2;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 6px 20px rgba(115, 96, 242, 0.35);
+        }
+        .viber-icon svg {
+            width: 44px;
+            height: 44px;
+            fill: #ffffff;
+        }
+        h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+            color: #1f1f1f;
+        }
+        p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0 0 24px;
+        }
+        .btn {
+            display: block;
+            background: #7360f2;
+            color: #ffffff !0important;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 24px;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(115, 96, 242, 0.4);
+            transition: transform 0.15s, background 0.15s;
+        }
+        .btn:active {
+            transform: scale(0.97);
+            background: #5d49e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="viber-icon">
+            <svg viewBox="0 0 24 24"><path d="M19.78 4.22A10.87 10.87 0 0 0 12.06 1C5.97 1 1.01 5.96 1.01 12.05c0 2.12.6 4.19 1.74 5.98L1 23l5.12-1.7a10.96 10.96 0 0 0 5.94 1.74c6.09 0 11.05-4.96 11.05-11.05 0-2.95-1.15-5.72-3.33-7.77zm-7.72 16.92a9.18 9.18 0 0 1-4.73-1.3l-.34-.2-3.05 1.01 1.03-2.98-.22-.35a9.14 9.14 0 0 1-1.42-4.97c0-5.07 4.13-9.2 9.2-9.2 2.46 0 4.77.96 6.51 2.7a9.15 9.15 0 0 1 2.69 6.5c0 5.07-4.13 9.2-9.2 9.2z"/></svg>
+        </div>
+        <h2>Отваряне на Viber</h2>
+        <p>Пренасочваме ви към чата във Viber...</p>
+        <a id="viberLink" class="btn" href="#">Отвори във Viber</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let num = params.get('num') || '';
+        num = num.replace(/[^0-9+]/g, '');
+        if (num) {
+            let encoded = num.startsWith('+') ? '%2B' + num.substring(1) : '%2B' + num;
+            let viberUrl = 'viber://chat?number=' + encoded;
+            document.getElementById('viberLink').href = viberUrl;
+            // Auto launch
+            setTimeout(function() {
+                window.location.href = viberUrl;
+            }, 300);
+        }
+    </script>
+</body>
+</html>
