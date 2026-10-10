@@ -16,6 +16,8 @@
 !favicon.ico
 !ldpe_*.jpg
 !*.mp4
+!zagros-vitosha-company-profile.pdf
+!zagros-vitosha-product-catalog-*.pdf
 !website/**
 
 # Sensitive files

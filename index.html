@@ -132,6 +132,10 @@
                 <a href="#gallery" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_packaging">Packaging & Logistics</a>
                 <a href="#ports" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_ports">Discharge Ports</a>
                 <a href="#tds" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_tds">TDS Specifications</a>
+                <a id="navCatalogBtn" href="zagros-vitosha-product-catalog-en.pdf" download="zagros-vitosha-product-catalog.pdf" class="hover:text-amber-400 text-amber-400 transition whitespace-nowrap flex items-center" title="Download Product Catalog (PDF)">
+                    <i class="fa-solid fa-file-pdf mr-1 text-xs text-amber-400"></i>
+                    <span data-lang-key="nav_catalog">Catalog (PDF)</span>
+                </a>
                 <a href="#rfq" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_rfq">RFQ Desk</a>
             </div>
 
@@ -169,9 +173,14 @@
         <!-- Slide-down Mobile Navigation Drawer -->
         <div id="mobileDrawer" class="hidden lg:hidden border-t border-zvb-border bg-[#060d1f]/98 backdrop-blur-xl px-5 py-6 transition-all duration-300 ease-in-out">
             <!-- Full-width RFQ Button inside Mobile Drawer -->
-            <a href="#rfq" onclick="toggleMobileMenu()" class="w-full mb-5 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider text-center block transition shadow-lg flex items-center justify-center space-x-2">
+            <a href="#rfq" onclick="toggleMobileMenu()" class="w-full mb-3 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider text-center block transition shadow-lg flex items-center justify-center space-x-2">
                 <i class="fa-solid fa-file-invoice text-sm"></i>
                 <span data-lang-key="btn_rfq_header">Request Official CIF Quotation</span>
+            </a>
+            <!-- Mobile Catalog Download Button -->
+            <a id="mobileCatalogBtn" href="zagros-vitosha-product-catalog-en.pdf" download="zagros-vitosha-product-catalog.pdf" class="w-full mb-5 py-3 rounded-xl bg-zvb-card border border-amber-500/40 text-amber-400 hover:text-white font-bold text-xs uppercase tracking-wider text-center block transition shadow flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-file-pdf text-amber-400 text-sm"></i>
+                <span data-lang-key="nav_catalog_download">Download Product Catalog (PDF)</span>
             </a>
             <div class="flex flex-col space-y-4 text-sm font-bold uppercase tracking-wider text-slate-200">
                 <a href="#products" onclick="toggleMobileMenu()" class="hover:text-amber-400 py-1 border-b border-zvb-border/40 flex items-center justify-between" data-lang-key="nav_polymers">
@@ -237,13 +246,17 @@
                         Zagros Vitosha Bulgaria supplies top-tier petrochemical raw materials: Polyethylene (HDPE / LDPE / LLDPE), Polypropylene (PP), Suspension PVC Resin (S-PVC K67), Polystyrene, Bitumen 60/70, and Fasteners on verified CIF/CFR terms to <strong class="text-white">Port of Varna, Burgas, Mersin & Istanbul</strong>.
                     </p>
 
-                    <div class="mt-8 flex flex-col sm:flex-row gap-3.5 sm:gap-4">
+                    <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-3.5 sm:gap-4">
                         <a href="#rfq" class="px-7 sm:px-9 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-xl shadow-amber-500/25 flex items-center justify-center">
                             <i class="fa-solid fa-file-invoice mr-2 text-sm sm:text-base"></i>
                             <span data-lang-key="hero_cta_quote">Request Official CIF Quotation</span>
                         </a>
+                        <a id="heroCatalogBtn" href="zagros-vitosha-product-catalog-en.pdf" download="zagros-vitosha-product-catalog.pdf" class="px-6 sm:px-8 py-4 rounded-xl bg-zvb-card border border-amber-500/50 text-amber-400 hover:text-white hover:bg-amber-500/20 hover:border-amber-400 font-bold text-xs sm:text-sm transition flex items-center justify-center shadow-lg shadow-amber-500/10" title="Download Official Product Catalog PDF">
+                            <i class="fa-solid fa-file-pdf mr-2 text-base text-amber-400"></i>
+                            <span data-lang-key="hero_cta_catalog">Download Catalog (PDF)</span>
+                        </a>
                         <a href="#tds" class="px-6 sm:px-8 py-4 rounded-xl bg-zvb-navy border border-zvb-border text-white font-bold text-xs sm:text-sm hover:border-blue-400 hover:bg-zvb-blue/30 transition flex items-center justify-center">
-                            <i class="fa-solid fa-table-list mr-2 text-amber-400"></i>
+                            <i class="fa-solid fa-table-list mr-2 text-slate-400"></i>
                             <span data-lang-key="hero_cta_tds">View TDS Specifications</span>
                         </a>
                     </div>
@@ -1285,6 +1298,8 @@
                 nav_packaging: "Packaging & Logistics",
                 nav_ports: "Discharge Ports",
                 nav_tds: "TDS Specifications",
+                nav_catalog: "Catalog (PDF)",
+                nav_catalog_download: "Download Product Catalog (PDF)",
                 nav_rfq: "RFQ Desk",
                 btn_rfq_header: "Request RFQ",
                 mobile_direct_contact: "Direct Commercial Inquiries:",
@@ -1293,6 +1308,7 @@
                 hero_title_2: "Port of Varna & Regional Hubs",
                 hero_desc: "Zagros Vitosha Bulgaria supplies top-tier petrochemical raw materials: Polyethylene (HDPE / LDPE / LLDPE), Polypropylene (PP), Suspension PVC Resin (S-PVC K67), Polystyrene, Bitumen 60/70, and Fasteners on verified CIF/CFR terms to Port of Varna, Burgas, Mersin & Istanbul.",
                 hero_cta_quote: "Request Official CIF Quotation",
+                hero_cta_catalog: "Download Catalog (PDF)",
                 hero_cta_tds: "View TDS Specifications",
                 badge_1: "Virgin Prime Grades",
                 badge_2: "Incoterms 2020 Insured",
@@ -1352,14 +1368,17 @@
                 nav_packaging: "Опаковка и Логистика",
                 nav_ports: "Пристанища",
                 nav_tds: "TDS Спецификации",
+                nav_catalog: "Каталог (PDF)",
+                nav_catalog_download: "Свали Продуктов Каталог (PDF)",
                 nav_rfq: "Запитване (RFQ)",
                 btn_rfq_header: "Запитване",
                 mobile_direct_contact: "Директен контакт с търговски отдел:",
                 hero_badge: "Директен международен износител на полимери и суровини",
                 hero_title_1: "Първични полимери с директна доставка до",
                 hero_title_2: "Пристанище Варна и региона",
-                hero_desc: "Загрос Витоша България доставя висококачествени петрохимични суровини: Полиетилен (HDPE / LDPE / LLDPE), Полипропилен (PP), Суспензионно PVC (S-PVC K67), Полистирен, Битум 60/70 и крепежни елементи при условия CIF/CFR до Пристанище Варна, Бургас, Мерсин и Истанбул.",
+                hero_desc: "Загрос Виتوша България доставя висококачествени петрохимични суровини: Полиетилен (HDPE / LDPE / LLDPE), Полипропилен (PP), Суспензионно PVC (S-PVC K67), Полистирен, Битум 60/70 и крепежни елементи при условия CIF/CFR до Пристанище Варна, Бургас, Мерсин и Истанбул.",
                 hero_cta_quote: "Заявете официална CIF оферта",
+                hero_cta_catalog: "Свали Каталог (PDF)",
                 hero_cta_tds: "Преглед на TDS спецификации",
                 badge_1: "100% Първичен гранулат",
                 badge_2: "CIF/CFR Застраховка",
@@ -1421,6 +1440,26 @@
                     el.textContent = dict[key];
                 }
             });
+
+            // Update Dynamic Catalog PDF links based on active language
+            const catalogPdf = lang === 'bg' ? 'zagros-vitosha-product-catalog-bg.pdf' : 'zagros-vitosha-product-catalog-en.pdf';
+            const catalogDownloadName = lang === 'bg' ? 'zagros-vitosha-produktov-katalog.pdf' : 'zagros-vitosha-product-catalog.pdf';
+            
+            const heroCatalog = document.getElementById('heroCatalogBtn');
+            if (heroCatalog) {
+                heroCatalog.href = catalogPdf;
+                heroCatalog.setAttribute('download', catalogDownloadName);
+            }
+            const navCatalog = document.getElementById('navCatalogBtn');
+            if (navCatalog) {
+                navCatalog.href = catalogPdf;
+                navCatalog.setAttribute('download', catalogDownloadName);
+            }
+            const mobileCatalog = document.getElementById('mobileCatalogBtn');
+            if (mobileCatalog) {
+                mobileCatalog.href = catalogPdf;
+                mobileCatalog.setAttribute('download', catalogDownloadName);
+            }
 
             const btnEN = document.getElementById('langBtnEN');
             const btnBG = document.getElementById('langBtnBG');
