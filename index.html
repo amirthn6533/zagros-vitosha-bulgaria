@@ -112,27 +112,27 @@
 
     <!-- Sticky Main Navigation Header -->
     <header class="sticky top-0 z-50 bg-[#060d1f]/95 backdrop-blur-md border-b border-zvb-border shadow-2xl">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-3">
             <!-- Brand Logo & Company Title -->
-            <a href="#" class="flex items-center space-x-2.5 sm:space-x-3 group flex-shrink-0" style="padding-right: 32px; margin-right: 28px; border-right: 2px solid rgba(255, 255, 255, 0.2);">
-                <img src="logo_transparent.png" alt="Zagros Vitosha Bulgaria Logo" class="h-9 sm:h-12 w-auto object-contain filter drop-shadow flex-shrink-0">
+            <a href="#" class="flex items-center space-x-2.5 group flex-shrink-0 pr-4 border-r border-slate-700/60">
+                <img src="logo_transparent.png" alt="Zagros Vitosha Bulgaria Logo" class="h-9 sm:h-10 w-auto object-contain filter drop-shadow flex-shrink-0">
                 <div class="leading-tight">
-                    <span class="font-display text-sm sm:text-xl font-black tracking-tight text-white group-hover:text-amber-400 transition block whitespace-nowrap">
+                    <span class="font-display text-sm sm:text-base xl:text-lg font-black tracking-tight text-white group-hover:text-amber-400 transition block whitespace-nowrap">
                         ZAGROS VITOSHA
                     </span>
-                    <span class="text-[8px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-extrabold block whitespace-nowrap">
+                    <span class="text-[8px] sm:text-[9px] uppercase tracking-wider text-amber-400 font-extrabold block whitespace-nowrap">
                         BULGARIA • POLYMERS
                     </span>
                 </div>
             </a>
 
             <!-- Desktop Navigation Links -->
-            <div class="hidden lg:flex items-center space-x-5 xl:space-x-8 text-xs font-bold text-slate-300 uppercase tracking-wider">
+            <div class="hidden lg:flex items-center gap-3 xl:gap-5 text-[11px] xl:text-xs font-bold text-slate-300 uppercase tracking-wider">
                 <a href="#products" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_polymers">Polymers</a>
-                <a href="#gallery" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_packaging">Packaging & Logistics</a>
-                <a href="#ports" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_ports">Discharge Ports</a>
-                <a href="#tds" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_tds">TDS Specifications</a>
-                <a id="navCatalogBtn" href="zagros-vitosha-product-catalog-en.pdf" download="zagros-vitosha-product-catalog.pdf" class="hover:text-amber-400 text-amber-400 transition whitespace-nowrap flex items-center" title="Download Product Catalog (PDF)">
+                <a href="#gallery" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_packaging">Packaging</a>
+                <a href="#ports" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_ports">Ports</a>
+                <a href="#tds" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_tds">TDS Specs</a>
+                <a id="navCatalogBtn" href="zagros-vitosha-product-catalog-en.pdf" download="zagros-vitosha-product-catalog.pdf" class="hover:text-amber-300 text-amber-400 transition whitespace-nowrap flex items-center" title="Download Product Catalog (PDF)">
                     <i class="fa-solid fa-file-pdf mr-1 text-xs text-amber-400"></i>
                     <span data-lang-key="nav_catalog">Catalog (PDF)</span>
                 </a>
@@ -140,25 +140,26 @@
             </div>
 
             <!-- Action Area: Language Switcher, WhatsApp & RFQ CTA -->
-            <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+            <div class="flex items-center gap-2 flex-shrink-0">
                 <!-- Language Toggle Button (EN / BG) -->
-                <div class="inline-flex rounded-xl bg-zvb-deep border border-zvb-border p-0.5 sm:p-1 text-[11px] sm:text-xs font-extrabold">
-                    <button id="langBtnEN" onclick="setLanguage('en')" class="px-2 sm:px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 transition font-black">
+                <div class="inline-flex rounded-xl bg-zvb-deep border border-zvb-border p-0.5 text-[11px] font-extrabold">
+                    <button id="langBtnEN" onclick="setLanguage('en')" class="px-2 py-1 rounded-lg bg-amber-500 text-slate-950 transition font-black">
                         EN
                     </button>
-                    <button id="langBtnBG" onclick="setLanguage('bg')" class="px-2 sm:px-2.5 py-1 rounded-lg text-slate-400 hover:text-white transition font-black">
+                    <button id="langBtnBG" onclick="setLanguage('bg')" class="px-2 py-1 rounded-lg text-slate-400 hover:text-white transition font-black">
                         БГ
                     </button>
                 </div>
 
-                <!-- Direct WhatsApp Link (Hidden on small mobile screens) -->
-                <a href="https://wa.me/359877944353" target="_blank" class="hidden sm:inline-flex items-center space-x-1 px-3 py-2 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-white transition font-bold text-xs">
+                <!-- Direct WhatsApp Link -->
+                <a href="https://wa.me/359877944353" target="_blank" class="hidden sm:inline-flex items-center space-x-1.5 px-2.5 xl:px-3 py-2 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-white transition font-bold text-xs whitespace-nowrap" title="WhatsApp: +359 87 794 4353">
                     <i class="fa-brands fa-whatsapp text-sm"></i>
-                    <span class="text-[11px] font-semibold">+359 87 794 4353</span>
+                    <span class="hidden xl:inline text-[11px] font-semibold">+359 87 794 4353</span>
+                    <span class="xl:hidden text-[11px] font-semibold">WhatsApp</span>
                 </a>
 
-                <!-- Request Quote Primary CTA: hidden on phones (<640px) to prevent header crowding -->
-                <a href="#rfq" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-xs uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-lg shadow-amber-500/20">
+                <!-- Request Quote Primary CTA -->
+                <a href="#rfq" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-[11px] xl:text-xs uppercase tracking-wider hover:from-amber-400 hover:to-amber-500 transition shadow-lg shadow-amber-500/20 whitespace-nowrap">
                     <span data-lang-key="btn_rfq_header">Request RFQ</span>
                     <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
@@ -1303,9 +1304,9 @@
                 top_shipment: "Direct Polymer Containers to Port of Varna, Burgas & Mersin",
                 top_location: "Sofia, Bulgaria",
                 nav_polymers: "Polymers",
-                nav_packaging: "Packaging & Logistics",
-                nav_ports: "Discharge Ports",
-                nav_tds: "TDS Specifications",
+                nav_packaging: "Packaging",
+                nav_ports: "Ports",
+                nav_tds: "TDS Specs",
                 nav_catalog: "Catalog (PDF)",
                 nav_catalog_download: "Download Product Catalog (PDF)",
                 nav_rfq: "RFQ Desk",
