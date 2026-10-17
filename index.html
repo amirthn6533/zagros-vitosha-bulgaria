@@ -139,8 +139,14 @@
                 <a href="#rfq" class="hover:text-amber-400 transition whitespace-nowrap" data-lang-key="nav_rfq">RFQ Desk</a>
             </div>
 
-            <!-- Action Area: Language Switcher, WhatsApp & RFQ CTA -->
-            <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+            <!-- Action Area: Language Switcher, 3D Portal Button, WhatsApp & RFQ CTA -->
+            <div class="flex items-center space-x-2 sm:space-x-2.5 flex-shrink-0">
+                <!-- Re-open 3D Portal Button -->
+                <button onclick="reopen3DPortal()" class="inline-flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl bg-amber-500/15 text-amber-400 border border-amber-500/40 hover:bg-amber-500 hover:text-slate-950 transition font-black text-[10px] sm:text-xs shadow-lg shadow-amber-500/10" title="Launch Interactive 3D Global Portal">
+                    <i class="fa-solid fa-earth-europe animate-spin-slow text-xs sm:text-sm"></i>
+                    <span>3D View</span>
+                </button>
+
                 <!-- Language Toggle Button (EN / BG) -->
                 <div class="inline-flex rounded-xl bg-zvb-deep border border-zvb-border p-0.5 sm:p-1 text-[11px] sm:text-xs font-extrabold">
                     <button id="langBtnEN" onclick="setLanguage('en')" class="px-2 sm:px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 transition font-black">
@@ -1650,17 +1656,539 @@
         </div>
     </div>
 
+    <!-- ========================================================================= -->
+    <!-- FULL-SCREEN 3D WEBGL ENTRANCE PORTAL (THREE.JS GLOBAL POLYMER NETWORK)    -->
+    <!-- ========================================================================= -->
+    <div id="zvb3DPortal" class="fixed inset-0 z-[9999] bg-[#04091a] overflow-hidden flex flex-col justify-between select-none transition-all duration-1000 ease-out" style="opacity: 1; transform: scale(1);">
+        <!-- 3D WebGL Canvas -->
+        <canvas id="zvb3DCanvas" class="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing"></canvas>
+
+        <!-- Radial Vignette & Subtle Grid Overlay (pointer-events-none) -->
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 50% 44%, transparent 25%, rgba(4, 9, 26, 0.72) 78%, rgba(2, 6, 18, 0.96) 100%);"></div>
+
+        <!-- Top HUD Bar -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 pt-4 sm:pt-6 flex items-center justify-between pointer-events-auto">
+            <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-[#09152e]/85 border border-amber-500/35 backdrop-blur-md shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400 -ml-2"></span>
+                <span class="text-[10px] sm:text-xs font-extrabold tracking-widest uppercase text-slate-200">
+                    ZAGROS VITOSHA BULGARIA EOOD <span class="text-amber-400 hidden sm:inline">• EU VAT: BG208619412</span>
+                </span>
+            </div>
+
+            <button onclick="enter3DPortal()" class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-900/80 hover:bg-amber-500 text-slate-300 hover:text-slate-950 border border-slate-700 hover:border-amber-400 text-[11px] font-extrabold uppercase tracking-wider transition backdrop-blur-md">
+                <span>Skip Intro</span>
+                <i class="fa-solid fa-forward-step text-[10px]"></i>
+            </button>
+        </div>
+
+        <!-- Center Interactive Hint (Desktop/Mobile) -->
+        <div class="relative z-10 pointer-events-none flex flex-col items-center justify-center my-auto px-4 text-center">
+            <div class="mt-44 sm:mt-56 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-950/60 border border-blue-400/25 text-[10px] text-blue-300 uppercase tracking-widest backdrop-blur-sm">
+                <i class="fa-solid fa-arrows-up-down-left-right text-amber-400"></i>
+                <span>Interactive 3D Polymer &amp; Maritime Globe • Move Mouse or Touch to Rotate</span>
+            </div>
+        </div>
+
+        <!-- Bottom Floating Glassmorphic Command Deck -->
+        <div class="relative z-10 w-full max-w-4xl mx-auto px-4 pb-7 sm:pb-9 pointer-events-auto">
+            <div class="rounded-3xl bg-[#071128]/80 border border-amber-500/35 backdrop-blur-xl p-5 sm:p-7 shadow-[0_0_70px_rgba(245,158,11,0.18)] text-center relative overflow-hidden">
+                <!-- Top Gold Accent Line -->
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-5 mb-3">
+                    <img src="logo_transparent.png" alt="Zagros Vitosha Bulgaria" class="h-14 sm:h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(245,158,11,0.45)]">
+                    <div class="text-center sm:text-left">
+                        <div class="text-[10px] sm:text-xs font-black uppercase tracking-[0.25em] text-amber-400">
+                            European Petrochemical &amp; Polymer Supply Network
+                        </div>
+                        <h2 class="font-display text-2xl sm:text-4xl font-black text-white tracking-tight leading-none mt-1">
+                            ZAGROS VITOSHA <span class="text-gold-gradient">BULGARIA</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Active Supply Corridors Pills -->
+                <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 my-3.5 text-[10px] sm:text-[11px] font-bold">
+                    <span class="px-2.5 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/35 text-emerald-300">
+                        <i class="fa-solid fa-Anchor mr-1"></i> CIF GDANSK (POLAND)
+                    </span>
+                    <span class="px-2.5 py-1 rounded-lg bg-amber-500/15 border border-amber-500/35 text-amber-300">
+                        <i class="fa-solid fa-ship mr-1"></i> CIF VARNA &amp; BURGAS
+                    </span>
+                    <span class="px-2.5 py-1 rounded-lg bg-blue-500/15 border border-blue-500/35 text-blue-300">
+                        <i class="fa-solid fa-ship mr-1"></i> CIF CONSTANTA
+                    </span>
+                    <span class="px-2.5 py-1 rounded-lg bg-purple-500/15 border border-purple-500/35 text-purple-300">
+                        <i class="fa-solid fa-Flask mr-1"></i> S-PVC • HDPE • LDPE • PP • BITUMEN
+                    </span>
+                </div>
+
+                <!-- Enter Portal CTA Button -->
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <button onclick="enter3DPortal()" class="group relative w-full sm:w-auto px-9 py-3.5 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 shadow-[0_0_35px_rgba(245,158,11,0.45)] hover:shadow-[0_0_50px_rgba(245,158,11,0.75)] hover:scale-105 flex items-center justify-center space-x-3">
+                        <span>Enter Corporate Portal</span>
+                        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1.5 transition-transform"></i>
+                    </button>
+                    <a href="Zagros-Vitosha-PVC-Catalog-Landscape.pdf" download="Zagros-Vitosha-PVC-Catalog-Landscape.pdf" target="_blank" class="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-zvb-deep/90 hover:bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 font-bold text-xs uppercase tracking-wider transition flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-file-pdf text-red-400"></i>
+                        <span>S-PVC Catalog (PDF)</span>
+                    </a>
+                </div>
+
+                <div class="mt-2.5 text-[10px] text-slate-400 font-medium">
+                    Click button, scroll mouse wheel, or auto-entering portal in <span id="portalCountdownNum" class="text-amber-400 font-bold">7</span>s...
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom 7-Second Auto-Entry Progress Bar -->
+        <div class="relative z-10 w-full h-1.5 bg-slate-900/90 overflow-hidden">
+            <div id="portalProgressBar" class="h-full bg-gradient-to-r from-amber-500 via-yellow-300 to-emerald-400 transition-all duration-100 ease-linear" style="width: 0%;"></div>
+        </div>
+    </div>
+
+    <!-- Three.js WebGL Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <script>
-        // Centered EU GDPR Cookie Modal Logic
-        document.addEventListener('DOMContentLoaded', function() {
+        // =========================================================================
+        // 3D WEBGL GLOBAL POLYMER & MARITIME PORTAL ENGINE (THREE.JS)
+        // =========================================================================
+        let portalActive = true;
+        let portalWarping = false;
+        let portalWarpProgress = 0;
+        let portalTimerElapsed = 0;
+        const PORTAL_AUTO_SECONDS = 7.0;
+        let lastPortalFrameTime = performance.now();
+        let userInteracting3D = false;
+
+        // Lock body scroll while 3D Portal is open
+        document.body.style.overflow = 'hidden';
+
+        function showCookieBannerIfNeeded() {
             if (!localStorage.getItem('zvb_cookie_consent')) {
                 const banner = document.getElementById('cookieConsentBanner');
                 if (banner) {
                     banner.classList.remove('hidden');
                 }
             }
+        }
+
+        function enter3DPortal() {
+            if (!portalActive || portalWarping) return;
+            portalWarping = true;
+            const portalEl = document.getElementById('zvb3DPortal');
+            if (portalEl) {
+                portalEl.style.opacity = '0';
+                portalEl.style.transform = 'scale(1.14)';
+                portalEl.style.pointerEvents = 'none';
+            }
+            setTimeout(() => {
+                portalActive = false;
+                portalWarping = false;
+                if (portalEl) portalEl.classList.add('hidden');
+                document.body.style.overflow = '';
+                showCookieBannerIfNeeded();
+            }, 950);
+        }
+
+        function reopen3DPortal() {
+            const portalEl = document.getElementById('zvb3DPortal');
+            if (!portalEl) return;
+            portalTimerElapsed = 0;
+            portalWarpProgress = 0;
+            portalWarping = false;
+            portalActive = true;
+            lastPortalFrameTime = performance.now();
+            portalEl.classList.remove('hidden');
+            // Force reflow
+            void portalEl.offsetWidth;
+            portalEl.style.opacity = '1';
+            portalEl.style.transform = 'scale(1)';
+            portalEl.style.pointerEvents = 'auto';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Scroll wheel or Enter/Space key immediately triggers 3D warp into website
+        window.addEventListener('wheel', function(e) {
+            if (portalActive && !portalWarping && Math.abs(e.deltaY) > 12) {
+                enter3DPortal();
+            }
+        }, { passive: true });
+
+        window.addEventListener('keydown', function(e) {
+            if (portalActive && !portalWarping && (e.key === 'Enter' || e.key === ' ' || e.key === 'Escape')) {
+                enter3DPortal();
+            }
         });
 
+        // Initialize Three.js Scene
+        (function initZVB3DPortal() {
+            const canvas = document.getElementById('zvb3DCanvas');
+            if (!canvas || typeof THREE === 'undefined') {
+                // Fallback if WebGL/CDN blocked
+                setTimeout(enter3DPortal, 1500);
+                return;
+            }
+
+            const scene = new THREE.Scene();
+            scene.fog = new THREE.FogExp2(0x04091a, 0.035);
+
+            const camera = new THREE.PerspectiveCamera(48, window.innerWidth / window.innerHeight, 0.1, 200);
+            camera.position.set(0, 1.2, 13.8);
+
+            const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0x1e3a8a, 1.4);
+            scene.add(ambientLight);
+
+            const goldLight = new THREE.PointLight(0xf59e0b, 3.2, 45);
+            goldLight.position.set(9, 7, 10);
+            scene.add(goldLight);
+
+            const blueLight = new THREE.PointLight(0x38bdf8, 2.5, 45);
+            blueLight.position.set(-10, -6, 8);
+            scene.add(blueLight);
+
+            // Master 3D World Group
+            const worldGroup = new THREE.Group();
+            worldGroup.position.y = 0.9;
+            scene.add(worldGroup);
+
+            // 1. Core Metallic Royal Navy Globe
+            const globeRadius = 3.35;
+            const coreGeo = new THREE.SphereGeometry(globeRadius, 48, 48);
+            const coreMat = new THREE.MeshPhongMaterial({
+                color: 0x071232,
+                emissive: 0x040a1e,
+                specular: 0x2563eb,
+                shininess: 40,
+                transparent: true,
+                opacity: 0.95
+            });
+            const coreSphere = new THREE.Mesh(coreGeo, coreMat);
+            worldGroup.add(coreSphere);
+
+            // 2. Geodesic Wireframe Network Shell
+            const wireGeo = new THREE.IcosahedronGeometry(globeRadius + 0.04, 3);
+            const wireMat = new THREE.MeshBasicMaterial({
+                color: 0x1d4ed8,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.22
+            });
+            const wireSphere = new THREE.Mesh(wireGeo, wireMat);
+            worldGroup.add(wireSphere);
+
+            // 3. Fibonacci Surface Node Point Cloud (1,600 Global Trade Nodes)
+            const nodeCount = 1600;
+            const nodePositions = new Float32Array(nodeCount * 3);
+            const nodeColors = new Float32Array(nodeCount * 3);
+            const goldenRatio = (1 + Math.sqrt(5)) / 2;
+
+            for (let i = 0; i < nodeCount; i++) {
+                const theta = 2 * Math.PI * i / goldenRatio;
+                const phi = Math.acos(1 - 2 * (i + 0.5) / nodeCount);
+                const r = globeRadius + 0.07;
+                const x = r * Math.sin(phi) * Math.cos(theta);
+                const y = r * Math.cos(phi);
+                const z = r * Math.sin(phi) * Math.sin(theta);
+
+                nodePositions[i * 3] = x;
+                nodePositions[i * 3 + 1] = y;
+                nodePositions[i * 3 + 2] = z;
+
+                // Highlight European & Asian latitude bands in gold/cyan
+                const isHighlight = (y > 0.8 && y < 2.9 && z > 0);
+                if (isHighlight && i % 5 === 0) {
+                    nodeColors[i * 3] = 0.98;
+                    nodeColors[i * 3 + 1] = 0.75;
+                    nodeColors[i * 3 + 2] = 0.15;
+                } else {
+                    nodeColors[i * 3] = 0.25;
+                    nodeColors[i * 3 + 1] = 0.58;
+                    nodeColors[i * 3 + 2] = 0.96;
+                }
+            }
+            const nodesGeo = new THREE.BufferGeometry();
+            nodesGeo.setAttribute('position', new THREE.BufferAttribute(nodePositions, 3));
+            nodesGeo.setAttribute('color', new THREE.BufferAttribute(nodeColors, 3));
+            const nodesMat = new THREE.PointsMaterial({
+                size: 0.055,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.85
+            });
+            const surfaceNodes = new THREE.Points(nodesGeo, nodesMat);
+            worldGroup.add(surfaceNodes);
+
+            // 4. Key Maritime Hubs & 3D Animated Shipping Arcs
+            function latLonToVec3(lat, lon, radius) {
+                const phi = (90 - lat) * (Math.PI / 180);
+                const theta = (lon + 180) * (Math.PI / 180);
+                return new THREE.Vector3(
+                    -radius * Math.sin(phi) * Math.cos(theta),
+                    radius * Math.cos(phi),
+                    radius * Math.sin(phi) * Math.sin(theta)
+                );
+            }
+
+            const hubs = [
+                { name: 'Sofia / Varna HQ', lat: 43.2, lon: 27.9, color: 0xfacc15, size: 0.13 },
+                { name: 'Gdansk Poland', lat: 54.35, lon: 18.65, color: 0x34d399, size: 0.11 },
+                { name: 'Constanta Romania', lat: 44.17, lon: 28.65, color: 0x38bdf8, size: 0.10 },
+                { name: 'Mersin / Istanbul', lat: 36.8, lon: 34.6, color: 0xf59e0b, size: 0.10 },
+                { name: 'Qingdao / Tianjin Hub', lat: 36.06, lon: 120.38, color: 0x60a5fa, size: 0.11 },
+                { name: 'Middle East Petrochemical Hub', lat: 27.5, lon: 52.6, color: 0xfbbf24, size: 0.11 }
+            ];
+
+            const hubVectors = [];
+            hubs.forEach(h => {
+                const pos = latLonToVec3(h.lat, h.lon, globeRadius + 0.08);
+                hubVectors.push(pos);
+
+                const beaconGeo = new THREE.SphereGeometry(h.size, 16, 16);
+                const beaconMat = new THREE.MeshBasicMaterial({ color: h.color });
+                const beacon = new THREE.Mesh(beaconGeo, beaconMat);
+                beacon.position.copy(pos);
+                worldGroup.add(beacon);
+
+                // Glowing halo ring around each port
+                const ringGeo = new THREE.RingGeometry(h.size * 1.4, h.size * 2.2, 24);
+                const ringMat = new THREE.MeshBasicMaterial({ color: h.color, side: THREE.DoubleSide, transparent: true, opacity: 0.65 });
+                const ring = new THREE.Mesh(ringGeo, ringMat);
+                ring.position.copy(pos.clone().multiplyScalar(1.01));
+                ring.lookAt(new THREE.Vector3(0, 0, 0));
+                worldGroup.add(ring);
+            });
+
+            // Create 3D Bezier Shipping Arcs into European Ports
+            const arcRoutes = [
+                [4, 0], // China -> Varna/Burgas
+                [4, 1], // China -> Gdansk Poland
+                [4, 2], // China -> Constanta
+                [5, 0], // ME Hub -> Varna/Burgas
+                [5, 3], // ME Hub -> Mersin/Istanbul
+                [0, 1]  // Bulgaria HQ -> Gdansk Poland
+            ];
+
+            const cargoPulses = [];
+            arcRoutes.forEach((pair, idx) => {
+                const start = hubVectors[pair[0]];
+                const end = hubVectors[pair[1]];
+                const mid = start.clone().add(end).multiplyScalar(0.5);
+                const dist = start.distanceTo(end);
+                mid.normalize().multiplyScalar(globeRadius + 0.65 + dist * 0.28);
+
+                const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
+                const points = curve.getPoints(48);
+                const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+                const lineMat = new THREE.LineBasicMaterial({
+                    color: idx % 2 === 0 ? 0xfbbf24 : 0x34d399,
+                    transparent: true,
+                    opacity: 0.65
+                });
+                const arcLine = new THREE.Line(lineGeo, lineMat);
+                worldGroup.add(arcLine);
+
+                // Animated Cargo Pulse Sphere traveling along the curve
+                const pulseGeo = new THREE.SphereGeometry(0.075, 12, 12);
+                const pulseMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+                const pulseMesh = new THREE.Mesh(pulseGeo, pulseMat);
+                worldGroup.add(pulseMesh);
+                cargoPulses.push({ mesh: pulseMesh, curve: curve, t: (idx * 0.19) % 1.0, speed: 0.0045 + idx * 0.0006 });
+            });
+
+            // 5. Dual Orbiting 3D Polymer Molecular Rings (S-PVC / PE / PP Chains)
+            const ring1Group = new THREE.Group();
+            const ring2Group = new THREE.Group();
+            worldGroup.add(ring1Group);
+            worldGroup.add(ring2Group);
+
+            const torus1Geo = new THREE.TorusGeometry(4.55, 0.018, 12, 100);
+            const torus1Mat = new THREE.MeshBasicMaterial({ color: 0xf59e0b, transparent: true, opacity: 0.45 });
+            ring1Group.add(new THREE.Mesh(torus1Geo, torus1Mat));
+
+            const torus2Geo = new THREE.TorusGeometry(5.25, 0.015, 12, 100);
+            const torus2Mat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.35 });
+            ring2Group.add(new THREE.Mesh(torus2Geo, torus2Mat));
+
+            // Populate Polymer Monomer Nodes on Orbital Rings
+            for (let i = 0; i < 18; i++) {
+                const angle = (i / 18) * Math.PI * 2;
+                const atomGeo = new THREE.SphereGeometry(i % 3 === 0 ? 0.11 : 0.065, 14, 14);
+                const atomMat = new THREE.MeshPhongMaterial({
+                    color: i % 3 === 0 ? 0xfbbf24 : 0x10b981,
+                    emissive: i % 3 === 0 ? 0x78350f : 0x064e3b,
+                    shininess: 90
+                });
+                const atom = new THREE.Mesh(atomGeo, atomMat);
+                atom.position.set(Math.cos(angle) * 4.55, Math.sin(angle) * 4.55, 0);
+                ring1Group.add(atom);
+            }
+            ring1Group.rotation.x = Math.PI * 0.32;
+            ring1Group.rotation.y = Math.PI * 0.12;
+
+            for (let i = 0; i < 22; i++) {
+                const angle = (i / 22) * Math.PI * 2;
+                const atomGeo = new THREE.SphereGeometry(i % 4 === 0 ? 0.095 : 0.055, 12, 12);
+                const atomMat = new THREE.MeshPhongMaterial({
+                    color: i % 4 === 0 ? 0x60a5fa : 0xe2e8f0,
+                    emissive: 0x1e3a8a,
+                    shininess: 80
+                });
+                const atom = new THREE.Mesh(atomGeo, atomMat);
+                atom.position.set(Math.cos(angle) * 5.25, Math.sin(angle) * 5.25, 0);
+                ring2Group.add(atom);
+            }
+            ring2Group.rotation.x = -Math.PI * 0.28;
+            ring2Group.rotation.z = Math.PI * 0.18;
+
+            // 6. Deep-Space Floating Polymer Granules / Starfield (1,300 particles)
+            const starCount = 1300;
+            const starPos = new Float32Array(starCount * 3);
+            for (let i = 0; i < starCount; i++) {
+                starPos[i * 3] = (Math.random() - 0.5) * 45;
+                starPos[i * 3 + 1] = (Math.random() - 0.5) * 32;
+                starPos[i * 3 + 2] = (Math.random() - 0.5) * 35;
+            }
+            const starGeo = new THREE.BufferGeometry();
+            starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+            const starMat = new THREE.PointsMaterial({ color: 0x93c5fd, size: 0.06, transparent: true, opacity: 0.55 });
+            const starField = new THREE.Points(starGeo, starMat);
+            scene.add(starField);
+
+            // Rotate globe initially to face Europe / Black Sea / Poland / Turkey
+            worldGroup.rotation.y = -2.1;
+            worldGroup.rotation.x = 0.25;
+
+            // Mouse & Touch Interactive Rotation
+            let targetRotX = 0.25;
+            let targetRotY = -2.1;
+            let isPointerDown = false;
+            let prevPointerX = 0;
+            let prevPointerY = 0;
+
+            window.addEventListener('mousemove', function(e) {
+                if (!portalActive) return;
+                const nx = (e.clientX / window.innerWidth) * 2 - 1;
+                const ny = (e.clientY / window.innerHeight) * 2 - 1;
+                if (isPointerDown) {
+                    const dx = e.clientX - prevPointerX;
+                    const dy = e.clientY - prevPointerY;
+                    targetRotY += dx * 0.008;
+                    targetRotX = Math.max(-0.8, Math.min(0.8, targetRotX + dy * 0.006));
+                    prevPointerX = e.clientX;
+                    prevPointerY = e.clientY;
+                } else {
+                    targetRotY += nx * 0.0025;
+                    targetRotX = 0.25 + ny * 0.22;
+                }
+            });
+
+            canvas.addEventListener('mousedown', function(e) {
+                isPointerDown = true;
+                userInteracting3D = true;
+                prevPointerX = e.clientX;
+                prevPointerY = e.clientY;
+            });
+            window.addEventListener('mouseup', function() {
+                isPointerDown = false;
+                setTimeout(() => { userInteracting3D = false; }, 1200);
+            });
+
+            canvas.addEventListener('touchstart', function(e) {
+                if (e.touches.length === 1) {
+                    isPointerDown = true;
+                    userInteracting3D = true;
+                    prevPointerX = e.touches[0].clientX;
+                    prevPointerY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            canvas.addEventListener('touchmove', function(e) {
+                if (isPointerDown && e.touches.length === 1) {
+                    const dx = e.touches[0].clientX - prevPointerX;
+                    const dy = e.touches[0].clientY - prevPointerY;
+                    targetRotY += dx * 0.009;
+                    targetRotX = Math.max(-0.8, Math.min(0.8, targetRotX + dy * 0.007));
+                    prevPointerX = e.touches[0].clientX;
+                    prevPointerY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            window.addEventListener('touchend', function() {
+                isPointerDown = false;
+                setTimeout(() => { userInteracting3D = false; }, 1200);
+            });
+
+            window.addEventListener('resize', function() {
+                if (!portalActive) return;
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+
+            const progressBarEl = document.getElementById('portalProgressBar');
+            const countdownNumEl = document.getElementById('portalCountdownNum');
+
+            function animate3DPortal(now) {
+                requestAnimationFrame(animate3DPortal);
+                if (!portalActive) return;
+
+                const dt = Math.min((now - lastPortalFrameTime) / 1000, 0.1);
+                lastPortalFrameTime = now;
+
+                // Update 7-second auto-entry timer (pauses while user actively drags globe)
+                if (!portalWarping && !userInteracting3D) {
+                    portalTimerElapsed += dt;
+                    const pct = Math.min((portalTimerElapsed / PORTAL_AUTO_SECONDS) * 100, 100);
+                    if (progressBarEl) progressBarEl.style.width = pct.toFixed(1) + '%';
+                    if (countdownNumEl) countdownNumEl.textContent = Math.max(1, Math.ceil(PORTAL_AUTO_SECONDS - portalTimerElapsed));
+                    if (portalTimerElapsed >= PORTAL_AUTO_SECONDS) {
+                        enter3DPortal();
+                    }
+                }
+
+                // Continuous smooth rotation
+                targetRotY += 0.0032;
+                worldGroup.rotation.y += (targetRotY - worldGroup.rotation.y) * 0.06;
+                worldGroup.rotation.x += (targetRotX - worldGroup.rotation.x) * 0.06;
+
+                // Counter-rotate polymer molecular rings
+                ring1Group.rotation.z += 0.0065;
+                ring2Group.rotation.y -= 0.0055;
+                starField.rotation.y += 0.0008;
+
+                // Move cargo pulses along shipping arcs
+                cargoPulses.forEach(p => {
+                    p.t = (p.t + p.speed) % 1.0;
+                    const pt = p.curve.getPointAt(p.t);
+                    p.mesh.position.copy(pt);
+                });
+
+                // 3D Camera Warp Zoom animation when entering portal
+                if (portalWarping) {
+                    portalWarpProgress += dt * 1.35;
+                    camera.position.z = THREE.MathUtils.lerp(13.8, 1.8, Math.min(portalWarpProgress, 1));
+                    worldGroup.rotation.y += 0.04;
+                    starField.position.z += 0.35;
+                } else {
+                    camera.position.z = 13.8;
+                    starField.position.z = 0;
+                }
+
+                renderer.render(scene, camera);
+            }
+
+            requestAnimationFrame(animate3DPortal);
+        })();
+
+        // Centered EU GDPR Cookie Modal Logic (shown after 3D Portal closes)
         function acceptAllCookies() {
             localStorage.setItem('zvb_cookie_consent', 'accepted_all');
             hideCookieBanner();
